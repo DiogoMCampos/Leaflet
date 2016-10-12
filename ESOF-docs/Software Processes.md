@@ -16,6 +16,9 @@ For each Pull Request provided, it is preferable to include some testing, if pos
 
 Because the time spent by the contributors on the project is small, they don't use software development processes like Agile or XP. Leaflet has no release dates. The issues published are usually filtered because sometimes the reported issue isn't a bug but a user problem.
 
+Leaflet doesn't have proper teams, they have a small team so everybody can do everything.
+
+The actual version of Leaflet is a usable version (1.0) but they are trying to implement new features and they already have some ideas like a map rotation and ES6 modules.
 
 ##Group members
 * [Bruno Barros](https://github.com/BrunoBarros21) - up201405249@fe.up.pt
