@@ -10,4 +10,4 @@ The first commit to GitHub was on September 1st, 2010 and the version 1.0.0 was 
 ##Software development Process
 According to the core members of this project, they use a branch separate from the master branch to work on additional features and/or fix bugs. More specifically, they use a single branch per feature or bug.
 
-For each Pull Request provided, it is preferable to include some testing if possible for validation purposes. It is also important that someone else reviews that request before merging with the master branch.
+For each Pull Request provided, it is preferable to include some testing, if possible for validation purposes. It is also important that someone else reviews that request before merging with the master branch.
