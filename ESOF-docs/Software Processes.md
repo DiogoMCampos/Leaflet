@@ -29,7 +29,7 @@ The repository is divided in some folders: 'src' for source files, the 'doc' fol
 
 
 ###Opinions
-Since the group in charge of this project
+Since the group in charge of this project is very small, it's very hard to provide support for some plugins developed by other people. 
 
 
 ##Group members
