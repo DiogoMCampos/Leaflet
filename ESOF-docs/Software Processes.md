@@ -10,18 +10,25 @@ The first commit to GitHub was on September 1st, 2010 and the version 1.0.0 was 
 The software is published under the [2-clause BSD License](https://github.com/Leaflet/Leaflet/blob/master/LICENSE).
 
 ##Software development Process
-According to the core members of this project, they use a branch separate from the master branch to work on additional features and/or fix bugs. More specifically, they use a single branch per feature or bug.
+
+###Project development
+Leaflet doesn't have proper teams, they have a small team so everybody can do everything.
 
 For each Pull Request provided, it is preferable to include some testing, if possible for validation purposes. It is also important that someone else reviews that request before merging with the master branch.
 
 Because the time spent by the contributors on the project is small, they don't use software development processes like Agile or XP. Leaflet has no release dates. The issues published are usually filtered because sometimes the reported issue isn't a bug but a user problem.
 
-Leaflet doesn't have proper teams, they have a small team so everybody can do everything.
+The actual version of Leaflet is a stable version (1.0) but they are trying to implement new features and they already have some ideas like map rotation and ES6 modules.
 
-The actual version of Leaflet is a usable version (1.0) but they are trying to implement new features and they already have some ideas like a map rotation and ES6 modules.
+###Repository structure
+According to the core members of this project, they use a branch separate from the master branch to work on additional features and/or fix bugs. More specifically, they use a single branch per feature or bug.
+
+The repository is divided in some folders: 'src' for source files, the 'doc' folder is for the documentation, tests are included in the 'spec' folder while the 'debug' folder contains pages with various features used for debugging.
+
+
 
 ##Group members
 * [Bruno Barros](https://github.com/BrunoBarros21) - up201405249@fe.up.pt
-* [Diogo Campos](https://github.com/DiogoMCampos) - up201405249@fe.up.pt
-* [Fábio Caramelo](https://github.com/Caramelo18) - up201405249@fe.up.pt
-* [William Fukunaga](https://github.com/williamnf) - up201405249@fe.up.pt
+* [Diogo Campos](https://github.com/DiogoMCampos) - up201403468@fe.up.pt
+* [Fábio Caramelo](https://github.com/Caramelo18) - up201404783@fe.up.pt
+* [William Fukunaga](https://github.com/williamnf) - up201405119@fe.up.pt
