@@ -30,7 +30,7 @@ The repository is divided in some folders: 'src' for source files, the 'doc' fol
 ###Activity
 The project is active, they also have almost one commit per day.
 
-Nowadays they 217 opened issues and they have some simple issues wich enables us to participate in the project later
+Nowadays they 217 opened issues and they have some simple issues (Easy fix to be more accurate) wich enables us to participate in the project later.
 
 ###Opinions
 Since the group in charge of this project is very small, it's very hard to provide support for some plugins developed by other people.
