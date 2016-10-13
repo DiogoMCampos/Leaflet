@@ -29,7 +29,8 @@ The repository is divided in some folders: 'src' for source files, the 'doc' fol
 
 
 ###Opinions
-Since the group in charge of this project is very small, it's very hard to provide support for some plugins developed by other people. 
+Since the group in charge of this project is very small, it's very hard to provide support for some plugins developed by other people.
+Seeing that Leaflet doesn't have release dates, theoretically the members don't feel pressured to provide the software by the time of release. Therefore, it is more likely for them to provide software versions that don't have a lot of bugs.
 
 
 ##Group members
