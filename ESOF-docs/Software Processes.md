@@ -28,7 +28,7 @@ According to the core members of this project, they use a branch separate from t
 The repository is divided in some folders: 'src' for source files, the 'doc' folder is for the documentation, tests are included in the 'spec' folder while the 'debug' folder contains pages with various features used for debugging.
 
 ###Activity
-The project is active, they also have more than one commit per day.
+The project is active, they almost always have at least one commit per day.
 
 Nowadays there are more than 200 opened issues and they have some simple issues (Easy fix to be more accurate) which enables us to participate in the project later.
 
@@ -36,6 +36,7 @@ Nowadays there are more than 200 opened issues and they have some simple issues 
 Since the group in charge of this project is very small, it's very hard to provide support for some plugins developed by other people.
 Seeing that Leaflet doesn't have release dates, theoretically the members don't feel pressured to provide the software by the time of release. Therefore, it is more likely for them to provide software versions that don't have a lot of bugs.
 It is possible that other people not directly involved in the project can make some plugins. With this, the main core is kept simple. However, plugins have a varying amount of support and some are outdated.
+The members meet in a chat room in Gitter, which is an instant messsaging system for developers and users of GitHub.
 
 ##Oficial project page
 http://leafletjs.com/
