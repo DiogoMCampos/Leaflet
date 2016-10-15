@@ -43,6 +43,6 @@ http://leafletjs.com/
 
 ##Group members
 * [Bruno Barros](https://github.com/BrunoBarros21) - up201405249@fe.up.pt
-* [Diogo Campos](https://github.com/DiogoMCampos) - up201403468@fe.up.pt
+* [Diogo Campos](https://github.com/DiogoMCampos) - d.diogocampos@gmail.com
 * [Fábio Caramelo](https://github.com/Caramelo18) - up201404783@fe.up.pt
 * [William Fukunaga](https://github.com/williamnf) - up201405119@fe.up.pt
