@@ -20,22 +20,27 @@ Since the time spent by the contributors on the project is small, they don't use
 
 Leaflet isn't very big which facilitates understanding the code and allows diversity in terms of plugins.
 
-The current Leaflet version is a stable version (1.0) and the idea for the future is to focus on frequent and small releases ([see 1.0 blog post here](http://leafletjs.com/2016/09/27/leaflet-1.0-final.html)), while also implementing new features (such as map rotation and support for ES6 modules).
+The current Leaflet version is a stable version (1.0) and the idea for the future is to focus on frequent and small releases ([see 1.0 blog post here](http://leafletjs.com/2016/09/27/leaflet-1.0-final.html)), maintaining support for the current features while also implementing new ones, such as map rotation and support for ES6 modules.
 
 ###Repository structure
 According to the core members of this project, they use a branch separate from the master branch to work on additional features and/or fix bugs. More specifically, they use a single branch per feature or bug.
 
-The repository is divided in some folders: 'src' for source files, the 'doc' folder is for the documentation, tests are included in the 'spec' folder while the 'debug' folder contains pages with various features used for debugging.
+The repository is divided in multiple folders: 'src' for source files, the 'doc' folder is for the documentation, tests are included in the 'spec' folder while the 'debug' folder contains pages with various features used for debugging.
 
 ###Activity
-The project is active, they almost always have at least one commit per day.
+The project is active, with 59 commits to the master branch in the past month (as of October 15, 2016) and 39 merged Pull Requests. They almost always have at least one commit per day.
 
-Nowadays there are more than 200 opened issues and they have some simple issues (Easy fix to be more accurate) which enables us to participate in the project later.
+Nowadays there are more than 200 opened issues and some are simple issues (labeled as easy fix, to be more accurate) which enables us to participate in the project later.
 
 ###Opinions
-Since the group in charge of this project is very small, it's very hard to provide support for some plugins developed by other people.
-Seeing that Leaflet doesn't have release dates, theoretically the members don't feel pressured to provide the software by the time of release. Therefore, it is more likely for them to provide software versions that don't have a lot of bugs.
-It is possible that other people not directly involved in the project can make some plugins. With this, the main core is kept simple. However, plugins have a varying amount of support and some are outdated.
+Since the group in charge of this project is very small, it's very hard to provide support for some plugins developed by other people and some of them are not actively maintained. Despite that, the team hopes to be able to achieve a stable plugin environment and work more closely with some of the plugin developers, now that they have achieved the 1.0 release
+
+Seeing that Leaflet doesn't have release dates, theoretically the members don't feel pressured to provide the software by the time of release. Therefore, it is more likely for them to provide software versions that don't have a lot of bugs, due to time spent on fixing them.
+
+It is possible that other people not directly involved in the project can make some plugins. With this, the main core is kept simple, which makes contributing easier and allows the focus to be on the important issues.
+
+However, this brings some disadvatanges, as plugins have a varying amount of support and some of them are outdated.
+
 The members meet in a chat room in Gitter, which is an instant messsaging system for developers and users of GitHub.
 
 ##Oficial project page
