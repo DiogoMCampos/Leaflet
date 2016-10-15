@@ -14,13 +14,13 @@ The software is published under the [2-clause BSD License](https://github.com/Le
 ###Project development
 Leaflet doesn't have proper teams, they have a small team so everybody can do everything, although each core member specializes in one or more topics.
 
-For each Pull Request provided, it is preferable to include some testing, if possible for validation purposes. It is also important that someone else reviews that request before merging with the master branch.
+For each Pull Request provided, it is necessary to include some testing for validation purposes. It is also important that someone else reviews that request before merging with the master branch.
 
-Because the time spent by the contributors on the project is small, they don't use software development processes like Agile or XP. Leaflet has no release dates. The issues published are usually filtered because sometimes the reported issue isn't a bug but a user problem.
+Since the time spent by the contributors on the project is small, they don't use software development processes like Agile or XP, focusing on solving issues as they are reported. The issues published are usually filtered because sometimes the reported issue isn't a bug but a user problem. Leaflet has no release dates.
 
 Leaflet isn't very big which facilitates understanding the code and allows diversity in terms of plugins.
 
-The actual version of Leaflet is a stable version (1.0) but they are trying to implement new features and they already have some ideas like map rotation and ES6 modules.
+The current Leaflet version is a stable version (1.0) and the idea for the future is to focus on frequent and small releases ([see 1.0 blog post here](http://leafletjs.com/2016/09/27/leaflet-1.0-final.html)), while also implementing new features (such as map rotation and support for ES6 modules).
 
 ###Repository structure
 According to the core members of this project, they use a branch separate from the master branch to work on additional features and/or fix bugs. More specifically, they use a single branch per feature or bug.
