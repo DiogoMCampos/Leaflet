@@ -1,4 +1,8 @@
+![FEUP image](https://sigarra.up.pt/feup/pt/WEB_GESSI_DOCS.download_file?p_name=F-370784536/logo_cores_oficiais.jpg)
+
 #Assignment 1: Software Processes
+
+![Leaflet image](https://rawgit.com/Leaflet/Leaflet/master/src/images/logo.svg)
 
 ##Project description
 Leaflet is an open-source library for mobile-friendly interactive maps. It is designed to be very lightweight, in order to have a great performance across multiple platforms, and highly extensible, allowing user-created plugins.
