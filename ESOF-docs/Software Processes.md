@@ -28,7 +28,7 @@ According to the core members of this project, they use a branch separate from t
 The repository is divided in multiple folders: 'src' for source files, the 'doc' folder is for the documentation, tests are included in the 'spec' folder while the 'debug' folder contains pages with various features used for debugging.
 
 ###Activity
-The project is active, with 59 commits to the master branch in the past month (as of October 15, 2016) and 39 merged Pull Requests. In average they have at least one commit per day.
+The project is active, with 54 commits to the master branch in the past month (as of October 16, 2016) and 35 merged Pull Requests. In average they have at least one commit per day.
 
 Nowadays there are more than 200 opened issues and some are simple issues (labeled as easy fix, to be more accurate) which enables us to participate in the project later.
 
