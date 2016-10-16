@@ -39,9 +39,9 @@ Nowadays there are more than 200 opened issues, labeled according to the type. S
 ###Opinions
 Since the group in charge of this project is very small, it's very hard to provide support for every plugin developed by other people and some of them are not actively maintained. Despite that, the team hopes to be able to achieve a stable plugin environment and work more closely with some of the plugin developers, now that they have achieved the 1.0 release.
 
-Seeing that Leaflet doesn't have release dates, theoretically the members don't feel pressured to provide the software in time of the release. Therefore, it is more likely for them to provide software versions that don't have a lot of bugs.
+Seeing that Leaflet doesn't have release dates, theoretically the members don't feel pressured to provide the software in a specific timeline. Therefore, it is more likely for them to provide more polished versions with less bugs.
 
-It is possible that other people not directly involved in the project can make some plugins. And since the main core is kept simple it makes contributing easier and allows the focus to be on the important issues. However, this brings some disadvantages, as plugins have a varying amount of support and some of them are outdated.
+Since the main core is kept simple, partly to make contributing easier, but mostly to allow the focus to be on the important issues. In spite of this, the library allows other people not directly involved in the project to make plugins. We believe this is a great way to allow for people to tailor the library to their own needs while keeping the main features updated and supported. However, this also brings some disadvantages, as plugins have a varying amount of support and some of them are outdated.
 
 The members meet in a chat room in Gitter, which is an instant messsaging system for developers and users of GitHub.
 
