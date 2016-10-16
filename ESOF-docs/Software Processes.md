@@ -56,7 +56,7 @@ http://leafletjs.com/
 
 ##Contributions
 
-|       **Names**   | **Percentge** |
+|       **Names**   | **Percentage** |
 |:----------------:	|:------------:	|
 | Bruno Barros     	|      25%     	|
 | Diogo Campos     	|      25%     	|
