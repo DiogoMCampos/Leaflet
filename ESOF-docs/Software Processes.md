@@ -41,7 +41,7 @@ Since the group in charge of this project is very small, it's very hard to provi
 
 Seeing that Leaflet doesn't have release dates, theoretically the members don't feel pressured to provide the software in a specific timeline. Therefore, it is more likely for them to provide more polished versions with less bugs.
 
-Since the main core is kept simple, partly to make contributing easier, but mostly to allow the focus to be on the important issues. In spite of this, the library allows other people not directly involved in the project to make plugins. We believe this is a great way to allow for people to tailor the library to their own needs while keeping the main features updated and supported. However, this also brings some disadvantages, as plugins have a varying amount of support and some of them are outdated.
+The main core is kept simple, partly to make contributing easier, but mostly to allow the focus to be on the important issues. In spite of this, the library allows other people not directly involved in the project to make plugins. We believe this is a great way to allow for people to tailor the library to their own needs while keeping the main features updated and supported. However, this also brings some disadvantages, as plugins have a varying amount of support and some of them are outdated.
 
 The members meet in a chat room in Gitter, which is an instant messsaging system for developers and users of GitHub.
 
