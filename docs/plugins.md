@@ -1236,6 +1236,17 @@ These plugins provide new markers or news ways of converting abstract data into 
 			<a href="https://github.com/adoroszlai">Doroszlai, Attila</a>
 		</td>
 	</tr>
+	<tr>
+		<td>
+			<a href="https://github.com/mikhailshilkov/leaflet-corridor">leaflet-corridor</a>
+		</td>
+		<td>
+			Renders a polyline with width fixed in meters, not in pixels; adjusts width depending on zoom level (<a href="http://mikhail.io/demos/leaflet-corridor/">demo</a>).
+		</td>
+		<td>
+			<a href="https://github.com/mikhailshilkov">Mikhail Shilkov</a>
+		</td>
+	</tr>
 </table>
 
 
@@ -2456,6 +2467,15 @@ Allow the user to measure distances or areas.
 			<a href="https://github.com/PowerPan">Johannes Rudolph</a>
 		</td>
 	</tr>
+	<tr>
+		<td>
+			<a href="https://github.com/ProminentEdge/leaflet-measure-path">Leaflet Measure Path</a>
+		</td><td>
+			Show measurements on paths; polylines, polygons and circles currently supported (<a href="http://prominentedge.com/leaflet-measure-path/">demo</a>)
+		</td><td>
+			<a href="https://github.com/perliedman">Per Liedman</a> / <a href="http://prominentedge.com/">Prominent Edge</a>
+		</td>
+	</tr>
 </table>
 
 
@@ -2660,6 +2680,15 @@ These plugins extend Leaflet event handling.
 	            <a href="https://github.com/IvanSanchez">Iván Sánchez Ortega</a>,
 	            <a href="https://github.com/MazeMap">MazeMap</a>
 	        </td>
+	</tr>
+	<tr>
+		<td>
+			<a href="https://github.com/perliedman/leaflet-touch-helper">Leaflet Touch Helper</a>
+		</td><td>
+			Makes it easy to touch vector overlays with thick fingers on a small display by adding a transparent, larger touch surface
+		</td><td>
+			<a href="https://github.com/perliedman">Per Liedman</a> / <a href="http://prominentedge.com/">Prominent Edge</a>
+		</td>
 	</tr>
 </table>
 
