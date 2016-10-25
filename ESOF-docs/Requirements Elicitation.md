@@ -3,9 +3,10 @@
 #Assignment 2: Requirements Elicitation
 
 ##Requirements
+If an user has an idea of a new feature he can suggest it on [this page](https://leaflet.uservoice.com/forums/150880-ideas-and-suggestions-for-leaflet). Users can also upvote the listed features and the team will discuss the implementation of this feature. 
 
-##Specific Requirements and Features 
+##Specific Requirements and Features
 
-##Use Cases 
+##Use Cases
 
 ##Domain Model
