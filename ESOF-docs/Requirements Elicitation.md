@@ -45,3 +45,19 @@ All of the project has to be submited to a variety of tests. The program is test
 ##Use Cases
 
 ##Domain Model
+
+
+##Group members
+* [Bruno Barros](https://github.com/BrunoBarros21) - up201405249@fe.up.pt
+* [Diogo Campos](https://github.com/DiogoMCampos) - d.diogocampos@gmail.com
+* [Fábio Caramelo](https://github.com/Caramelo18) - up201404783@fe.up.pt
+* [William Fukunaga](https://github.com/williamnf) - up201405119@fe.up.pt
+
+##Contributions
+
+|       **Names**   | **Percentage** |
+|:----------------:	|:------------:	|
+| Bruno Barros     	|      25%     	|
+| Diogo Campos     	|      25%     	|
+| Fabio Caramelo   	|      25%     	|
+| William Fukunaga 	|      25%     	|
