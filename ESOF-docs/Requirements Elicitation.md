@@ -45,8 +45,7 @@ Users can also use Gitter to chat with the contributors and have a more personal
 
 ###Analysis and Negotiation
 Through the discussions at the forum or at the chat it's possible to know whether the feature is good or what is missing.
-
-After the implementation of the feature the contributor can make a Pull Request and after a new analysis the Pull Request can be accepted.
+Other people can give an opinion about the feature in order to improve it if they think it's something worthy to be added. 
 
 ###Specification
 Although we weren't able to find a SRS document, there are multiple documents concerning software requirements and user manual available.
