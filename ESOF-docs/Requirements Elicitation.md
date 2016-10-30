@@ -12,8 +12,8 @@ A requirement is a feature that solves a particular problem, and it is usually f
 This process of formulating requirements is known as requirements engineering and it consists on multiple phases. In the project we are studying, this process seems rather informal.
 
 The Leaflet requirements are chosen in two ways:
-* the main core team decides on a feature to implement
-* the community suggests a new feature
+*   The main core team decides on a feature to implement
+*   The community suggests a new feature
 
 ###Functional and Nonfunctional Requirements
 Requirements can be either **functional requirements**, which specify the capabilities of the application and the user problems the team aims to solve, or **nonfunctional requirements**, which describe the constraints to the solution implemented and its execution.
@@ -35,7 +35,7 @@ These are some examples in the Leaflet project.
 ###Elicitation
 The team usually works on fixing the existing bugs or implementing new features (as we have previously mentioned, right now one of those features is the map rotation).
 
-This process is heavily integrated with the community, as there are two channels where both the users and developers can contribute to the elicitation: 
+This process is heavily integrated with the community, as there are two channels where both the users and developers can contribute to the elicitation:
 *   By reporting bugs on the [GitHub Issues page](https://github.com/Leaflet/Leaflet/issues)
 *   By suggesting a new feature or voting on the existing ones on the [Uservoice page](https://leaflet.uservoice.com/forums/150880-ideas-and-suggestions-for-leaflet)
 
@@ -60,7 +60,13 @@ All of the project has to be submitted to a variety of tests. The program is tes
 
 ##Use Cases
 
+![Use case](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/UseCaseDiagram.png)
+
+
+
 ##Domain Model
+
+![Domain model](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/DomainModel.png)
 *   Map - The central class of the API. It is used to create a map on a page and manipulate it.
 
 *   Handler - Base class for handler classes that are used internally to inject interaction features like dragging to classes like Map and Marker.
