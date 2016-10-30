@@ -24,18 +24,22 @@ These are some examples in the Leaflet project.
 *   Supporting the integration of a variety of maps, through the use of tile layers
 *   Allowing the end user to interact with the map by dragging, zooming or clicking
 *   Allowing developers to customize their maps easily, both in functionality and styling
-*   Being easily extensible in order the community to build plug-ins
 
 ####Non Functional Requirements  
 *   Being an Open Source project
 *   Having an extensive documentation
 *   Being lightweight and supporting multiple browsers and devices (including mobile)
 *   Using no external dependencies
+*   Focusing on being simple and doing the basics perfectly
 
 ###Elicitation
-The team usually works on fixing the existing bugs or implementing some new features (as we have previously mentioned, right now the team is working on map rotation).
+The team usually works on fixing the existing bugs or implementing new features (as we have previously mentioned, right now one of those features is the map rotation).
 
-However, if a user has an idea of a new feature he can suggest it  [here](https://leaflet.uservoice.com/forums/150880-ideas-and-suggestions-for-leaflet). Users can also up-vote the listed features and the team will discuss the implementation of this feature. If the team decides the suggestion is good, they mark it as "planned" and will implement it later.
+This process is heavily integrated with the community, as there are two channels where both the users and developers can contribute to the elicitation: 
+*   By reporting bugs on the [GitHub Issues page](https://github.com/Leaflet/Leaflet/issues)
+*   By suggesting a new feature or voting on the existing ones on the [Uservoice page](https://leaflet.uservoice.com/forums/150880-ideas-and-suggestions-for-leaflet)
+
+The team, in order to decide what to work on, considers these two channels and their own ideas, taking into account Leaflet's other requirements. In practice, this means that the most impactful bugs and the most upvoted suggestions will be the focus of their work, as long as they fit the project scope and requirements.
 
 Users can also use Gitter to chat with the contributors and have a more personal opinion about the request made.
 
