@@ -7,22 +7,34 @@ Leaflet is a JavaScript open-source library for mobile-friendly interactive maps
 This assignment will focus on how the project deals with requirement elicitation.
 
 ##Requirements
-A requirement is a feature that is formulated through a study across the User's intentions.
+A requirement is a feature that solves a particular problem, and it is usually formulated through a study across the user's intentions.
 
-Leaflet new features can be chosen in two ways: either the main core team can decide which features to implement or the community.
+This process of formulating requirements is known as requirements engineering and it consists on multiple phases. In the project we are studying, this process seems rather informal.
 
-###Functional and Non Functional Requirements
-System Requirements can be separated in two parts, Functional and Non Functional. Functional Requirements are requirements for the application to run, the Non Functional Requirements are requirements to improve the application performance.
+The Leaflet requirements are chosen in two ways:
+* the main core team decides on a feature to implement
+* the community suggests a new feature
 
-There are some examples in Leaflet.
+###Functional and Nonfunctional Requirements
+Requirements can be separated in two groups: Functional and Nonfunctional. 
+
+Functional requirements specify the capabilities of the application and the user problems the team aims to solve.
+
+The nonfunctional requirements describe the constraints to the solution implemented and its execution.
+
+These are some examples in the Leaflet project.
 
 ####Functional Requirements
-*   A variety of maps
+*   Supporting the integration of a variety of maps, through the use of tile layers
+*   Allowing the end user to interact with the map by dragging, zooming or clicking
+*   Allowing developers to customize their maps easily, both in functionality and styling
+*   Being easily extensible in order the community to build plug-ins
 
 ####Non Functional Requirements  
-*   Is an Open Source project
-*   The project is documentated
-*   The program tries to be efficient
+*   Being an Open Source project
+*   Having an extensive documentation
+*   Being lightweight and supporting multiple browsers and devices (including mobile)
+*   Using no external dependencies
 
 ###Elicitation
 The team usually works on fixing the existing bugs or implementing some new features (as we have previously mentioned, right now the team is working on map rotation).
