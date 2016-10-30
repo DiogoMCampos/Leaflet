@@ -56,7 +56,8 @@ Although we weren't able to find a SRS document, there are multiple documents co
 *   The [changelog](https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.md) includes information on how the project evolved over time with each release.
 
 ###Validation
-All of the project has to be submitted to a variety of tests. The program is tested personally and automatically using unit tests. But all of these tests are not sufficient so they have a forum for the users to report all of the bugs to be corrected.
+The goal of the validation process is to assure that the requirements define the desired goals. The program is tested automatically using unit tests, ensuring it satisfies the set requirements. If it passes the tests, the pull request will be considered by the main team. If it passes the tests, the pull request will be considered by the main team.
+But all of these tests are not sufficient so they have a issues page for the users to report all of the bugs to be corrected.
 
 ##Use Cases
 
