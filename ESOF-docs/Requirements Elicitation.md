@@ -56,13 +56,13 @@ Although we weren't able to find a SRS document, there are multiple documents co
 *   The [changelog](https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.md) includes information on how the project evolved over time with each release.
 
 ###Validation
-The goal of the validation process is to assure that the requirements define the desired goals. The program is tested automatically using unit tests, ensuring it satisfies the set requirements. If it passes the tests, the pull request will be considered by the main team. If it passes the tests, the pull request will be considered by the main team.
-But all of these tests are not sufficient so they have a issues page for the users to report all of the bugs to be corrected.
+The goal of the validation process is to assure that the requirements define the desired goals.
+
+The program is tested automatically using unit tests, ensuring it satisfies the set requirements. If it passes the tests, the pull request will be considered by the main team. Nevertheless, all of these tests are not sufficient, so there is a issues page for the users to report all of the bugs to be corrected.
 
 ##Use Cases
 
 ![Use case](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/UseCaseDiagram.png)
-
 
 If the user is the actor we have the following use case:
 *   **Map visualization**: the user can visualize the generated map. The user interaction with the map will depend on the configuration done by the developer.
@@ -79,7 +79,7 @@ If the developer is the actor we have the following use cases:
 
 ![Domain model](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/DomainModel.png)
 *   **Map**: The central class of the API. It is used to create a map on a page and manipulate it.
-*   **Handle**:- Base class for handler classes that are used internally to inject interaction features like dragging to classes like Map and Marker.
+*   **Handle**: Base class for handler classes that are used internally to inject interaction features like dragging to classes like Map and Marker.
 *   **Events**: A set of methods shared between event-powered classes (like `Map` and `Marker`). Generally, events allow you to execute some function when something happens with an object (e.g. the user clicks on the map, causing the map to fire `'click'` event).
 *   **Geo**: Abstract class that defines coordinate reference systems for projecting geographical points into pixel (screen) coordinates and back to coordinates in other units.
 *   **Layer**: A set of methods that all Leaflet layers use. Allows for map handling, such as drawing simple geometry or dragging icons on the map
