@@ -49,7 +49,11 @@ Through the discussions at the forum or at the chat it's possible to know whethe
 After the implementation of the feature the contributor can make a Pull Request and after a new analysis the Pull Request can be accepted.
 
 ###Specification
-The Documentation specifies all of the project and can be consulted [here](http://leafletjs.com/reference.html).
+Although we weren't able to find a SRS document, there are multiple documents concerning software requirements and user manual available.
+
+*   There is the API Reference that can be consulted [here](http://leafletjs.com/reference.html), which includes usage information for the Leaflet API
+*   There is a [features page](http://leafletjs.com/#features)
+*   The [changelog](https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.md) includes information on how the project evolved over time with each release.
 
 ###Validation
 All of the project has to be submitted to a variety of tests. The program is tested personally and automatically using unit tests. But all of these tests are not sufficient so they have a forum for the users to report all of the bugs to be corrected.
