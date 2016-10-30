@@ -69,7 +69,7 @@ If the user is the actor we have the following use case:
 
 If the developer is the actor we have the following use cases:
 *   **Map configuration**: the developer can configure the way the user is going to visualize and interact with the map.
-*   **Events**: the way user inputs (like clicks, drags) are handled.
+*   **Events**: the way user inputs (for example clicks, drags) are handled.
 *   **Popups**: map popups can be displayed in several ways.
 *   **Control**: gives the ability to alter the map or show visualization information.
 *   **Layer**: the way the map is displayed, for example how images or streets are displayed.
