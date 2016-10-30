@@ -51,8 +51,8 @@ After the implementation of the feature the contributor can make a Pull Request 
 ###Specification
 Although we weren't able to find a SRS document, there are multiple documents concerning software requirements and user manual available.
 
-*   There is the API Reference that can be consulted [here](http://leafletjs.com/reference.html), which includes usage information for the Leaflet API
-*   There is a [features page](http://leafletjs.com/#features)
+*   There is the API Reference that can be consulted [here](http://leafletjs.com/reference.html), which includes usage information for the Leaflet API.
+*   There is a [features page](http://leafletjs.com/#features) listing the capabilities of the library.
 *   The [changelog](https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.md) includes information on how the project evolved over time with each release.
 
 ###Validation
