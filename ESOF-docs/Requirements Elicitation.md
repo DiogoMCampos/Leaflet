@@ -18,9 +18,9 @@ The Leaflet requirements are chosen in two ways:
 ###Functional and Nonfunctional Requirements
 Requirements can be either **functional requirements**, which specify the capabilities of the application and the user problems the team aims to solve, or **nonfunctional requirements**, which describe the constraints to the solution implemented and its execution.
 
-These are some examples in the Leaflet project.
 
 ####Functional Requirements
+*   Map visualization on a browser
 *   Supporting the integration of a variety of maps, through the use of tile layers
 *   Allowing the end user to interact with the map by dragging, zooming or clicking
 *   Allowing developers to customize their maps easily, both in functionality and styling
@@ -62,6 +62,16 @@ All of the project has to be submitted to a variety of tests. The program is tes
 
 ![Use case](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/UseCaseDiagram.png)
 
+
+If the user is the actor we have the following use case:
+*   Map visualization - the user can visualize the generated map. The user interaction with the map will depend on the configuration done by the developer.
+If the developer is the actor we have the following use cases:
+*   Map configuration - the developer can configure the way the user is going to visualize and interact with the map.
+*   Events - the way user inputs (like clicks, drags) are handled.
+*   PopUps - map popups can be displayed in several ways.
+*   Control - gives the ability to alter the map or show visualization information.
+*   Layer - the way the map is displayed, for example how images or streets are displayed.
+*   Plugins - plugins can be included in the map to display.
 
 
 ##Domain Model
