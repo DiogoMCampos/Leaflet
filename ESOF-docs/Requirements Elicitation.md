@@ -45,7 +45,19 @@ All of the project has to be submitted to a variety of tests. The program is tes
 ##Use Cases
 
 ##Domain Model
+*   Map - The central class of the API. It is used to create a map on a page and manipulate it.
 
+*   Handler - Base class for handler classes that are used internally to inject interaction features like dragging to classes like Map and Marker.
+
+*   Events - A set of methods shared between event-powered classes (like `Map` and `Marker`). Generally, events allow you to execute some function when something happens with an object (e.g. the user clicks on the map, causing the map to fire `'click'` event).
+
+*   Geo - Abstract class that defines coordinate reference systems for projecting geographical points into pixel (screen) coordinates and back to coordinates in other units.
+
+*   Layer - A set of methods that all Leaflet layers use. Allows for map handling, such as drawing simple geometry or dragging icons on the map
+
+*   Geometry - Configuring shapes for drawing to the map and transforming them.
+
+*   Control - Base class for implementing map controls. Handles positioning.
 
 ##Group members
 *   [Bruno Barros](https://github.com/BrunoBarros21) - up201405249@fe.up.pt
