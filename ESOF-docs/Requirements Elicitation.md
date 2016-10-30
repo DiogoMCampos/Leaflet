@@ -16,11 +16,7 @@ The Leaflet requirements are chosen in two ways:
 * the community suggests a new feature
 
 ###Functional and Nonfunctional Requirements
-Requirements can be separated in two groups: Functional and Nonfunctional. 
-
-Functional requirements specify the capabilities of the application and the user problems the team aims to solve.
-
-The nonfunctional requirements describe the constraints to the solution implemented and its execution.
+Requirements can be either **functional requirements**, which specify the capabilities of the application and the user problems the team aims to solve, or **nonfunctional requirements**, which describe the constraints to the solution implemented and its execution.
 
 These are some examples in the Leaflet project.
 
