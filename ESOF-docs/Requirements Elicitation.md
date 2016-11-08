@@ -45,8 +45,7 @@ Users can also use Gitter to chat with the contributors and have a more personal
 
 ###Analysis and Negotiation
 Through the discussions at the forum or at the chat it's possible to know whether the feature is good or what is missing.
-
-After the implementation of the feature the contributor can make a Pull Request and after a new analysis the Pull Request can be accepted.
+Other people can give an opinion about the feature in order to improve it if they think it's something worthy to be added. 
 
 ###Specification
 Although we weren't able to find a SRS document, there are multiple documents concerning software requirements and user manual available.
@@ -69,7 +68,7 @@ If the user is the actor we have the following use case:
 
 If the developer is the actor we have the following use cases:
 *   **Map configuration**: the developer can configure the way the user is going to visualize and interact with the map.
-*   **Events**: the way user inputs (like clicks, drags) are handled.
+*   **Events**: the way user inputs (for example clicks, drags) are handled.
 *   **Popups**: map popups can be displayed in several ways.
 *   **Control**: gives the ability to alter the map or show visualization information.
 *   **Layer**: the way the map is displayed, for example how images or streets are displayed.
