@@ -4,6 +4,8 @@
 
 ##Introduction
 
+One architectural pattern this project follows is **Repository architecture**. This allows changes to be propagated easily between all components.
+Another pattern is **Client Server architecture**. The program sends a request to popular websites to get map data.
 ##Logical View
 
 ##Development View
