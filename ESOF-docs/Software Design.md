@@ -71,3 +71,18 @@ The process view shows how the system handles run-time interacting processes.
 ![Process View](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Activity%20Diagram.png)
 As shown in the diagram, when Leaflet is started the map is loaded. The map loading consists in getting data from the map provider (for example, from OpenStreetMap) and displaying the map according to the settings.
 When the user interacts with the map, Leaflet will handle the event and display the information requested by the event. For instance, if the user drags the map, the show area will be different.
+
+##Group members
+*   [Bruno Barros](https://github.com/BrunoBarros21) - up201405249@fe.up.pt
+*   [Diogo Campos](https://github.com/DiogoMCampos) - d.diogocampos@gmail.com
+*   [Fábio Caramelo](https://github.com/Caramelo18) - up201404783@fe.up.pt
+*   [William Fukunaga](https://github.com/williamnf) - up201405119@fe.up.pt
+
+##Contributions
+
+|       **Names**   | **Percentage** |
+|:----------------:	|:------------:	|
+| Bruno Barros     	|      25%     	|
+| Diogo Campos     	|      25%     	|
+| Fabio Caramelo   	|      25%     	|
+| William Fukunaga 	|      25%     	|
