@@ -18,7 +18,7 @@ These represent different approaches to the organization and behavior of the sof
 The definition of a pattern is a means of representing, sharing and reusing knowledge. **Architectural pattern**(or architectural style) following that line of thought, is a stylized description of good architectural design practice, which has been tried and tested in different environments.
 Leaflet follows the **model view controller architecture**. It separates the handling of mouse interaction from geometry that is shown on the map and others.
 Another architectural pattern this project follows is **Repository architecture**. This allows changes to be propagated easily between all components. This pattern is vital for the working model used in Leaflet which allows developers to manipulate a copy of the program so as to implement a feature or correcting a issue.
-**Client Server architecture** is also a architectural pattern followed by Leaflet. The program sends a request to popular websites to get map data.
+**Client Server architecture** is also a architectural pattern followed by Leaflet. The program, in the begging, sends a request to popular websites to get map data.
 Lastly, **Layered architecture** is also implemented. Leaflet has a map class which uses all the elements in the layer below it.
 
 
@@ -31,13 +31,13 @@ The logical view displays a package diagram. It represents the connections betwe
 *   **map**: main package that utilizes all others;
 *   **control**: contains classes that handle map controls. All classes are derived from one single file;
 *   **dom**: implements the usage of dom related events;
-*   **core**: provides
+*   **core**: enables all the instances necessary to the operation of the program;
 *   **handler**:allows for interaction between the user and the program by means of events;
 *   **geometry**: set of geometrical forms to display on top of the map;
 *   **layer**: represents panels to be added on top of the map;
 *   **marker**: optional layer which contains elements to be displayed on a layer;
 *   **vector**: optional layer that implements geometrical figures;
-*   **tile**: optional layer which allows the user to put a panel in top of the map;
+*   **tile**: instanciates the bitmap graphics in a grid arragment in order to display the map;
 
 ##Development View
 
