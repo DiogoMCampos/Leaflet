@@ -12,9 +12,11 @@ The logical view displays a package diagram. It represents the connections betwe
 ![Package diagram](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Package%20Diagram.png)
 
 ##Development View
-Shows how the program is composed. 
+Shows how the program is composed.
 ![Component View](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Component%20View.png)
 
 ##Deployment View
 
 ##Process View
+The process view shows how the system handles run-time interacting processes.
+![Process View](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Activity%20Diagram.png)
