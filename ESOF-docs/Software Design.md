@@ -16,7 +16,7 @@ The logical view displays a package diagram. It represents the connections betwe
 *   **control**: contains classes that handle map controls. All classes are derived from one single file;
 *   **dom**: implements the usage of dom related events;
 *   **core**: provides
-*   **handler**:allows for interaction between th user and the program by means of events;
+*   **handler**:allows for interaction between the user and the program by means of events;
 *   **geometry**: set of geometrical forms to display on top of the map;
 *   **layer**: represents panels to be added on top of the map;
 *   **marker**: optional layer which contains elements to be displayed on a layer;
@@ -32,3 +32,5 @@ Shows how the program is composed.
 ##Process View
 The process view shows how the system handles run-time interacting processes.
 ![Process View](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Activity%20Diagram.png)
+As shown in the diagram, when Leaflet is started the map is loaded. The map loading consists in getting data from the map (for example, from Open Street Maps) and displaying the map according to the settings.
+When the user interacts with the map, Leaflet will handle the event and display the information requested by the event. For instance, if the user drags the map, the show area will be different.
