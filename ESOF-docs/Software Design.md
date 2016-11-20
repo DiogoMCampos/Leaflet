@@ -8,6 +8,8 @@ Leaflet follows the model view controller architecture. It separates the handlin
 One architectural pattern this project follows is **Repository architecture**. This allows changes to be propagated easily between all components.
 Another pattern is **Client Server architecture**. The program sends a request to popular websites to get map data.
 ##Logical View
+The logical view displays a package diagram. It represents the connections between each package and shows how the source code is organized.
+![Package diagram](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Package%20Diagram.png)
 
 ##Development View
 
