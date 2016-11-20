@@ -18,9 +18,13 @@ These diagrams represent different approaches to the organization and behavior o
 
 A pattern is a manner of representing, sharing and reusing knowledge.
 **Architectural Pattern** (or architectural style), following that line of thought, is a stylized description of good architectural design practice, which has been tried and tested in different environments.
+
 Leaflet follows the **Model View Controller Architecture**. On this project, Model is the map data, while Controller is responsible for handling the user inputs and View displays the map tiles and geometry elements (if any). However, this pattern is not stated on Leaflet.
+
 **Client Server Architecture** is also a architectural pattern followed by Leaflet. Initially, the client sends a request to get the library and the map data. However, this step is optional since the library can be available locally.
+
 Another pattern present in Leaflet is **Event Driven Architecture**. When a user interacts with the shown map, the event is processed and the information is displayed accordingly.
+
 Lastly, **Layered Architecture** is also present. All the implemented layers are isolated, have a specific purpose and communicate with each other. For example, Leaflet has a map class which uses all the elements in the layers below.
 
 
