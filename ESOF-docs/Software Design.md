@@ -23,7 +23,9 @@ Lastly, **Layered architecture** is also implemented. Leaflet has a map class wh
 
 
 ##Logical View
+
 The logical view displays a package diagram. It represents the connections between each package and shows how the source code is organized.
+
 ![Package diagram](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Package%20Diagram.png)
 
 *   **map**: main package that utilizes all others;
@@ -38,15 +40,21 @@ The logical view displays a package diagram. It represents the connections betwe
 *   **tile**: optional layer which allows the user to put a panel in top of the map;
 
 ##Development View
+
 Describes how the program is composed and the dependencies and relations between the different modules.
+
 ![Component View](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Component%20View.png)
 
-The **map** module, which is the main module, is responsible for the creation of the map and uses every other component to build the final visualization. Every other module has a specific purpose, although some of them share similar goals and can be grouped together. 
+The **map** module, which is the main one, is responsible for the creation of the map and uses every other component to build the final visualization. Every other module has a specific purpose, although some of them share similar goals and can be grouped together. 
 
 * The **control** and **handler** modules are responsible for user interaction and how the map reacts to events. 
 * The **geometry**, **layer**, **marker**, **vector** and **tile** modules are responsible for the visualization, handling the display of tiles, markers, pop-ups or any other elements.
 
+This separation in different modules allows Leaflet contributors and plugin makers to easily understand the code base and make changes concerning specific aspects of the library without having to modify the other modules.
+
 ##Deployment View
+
+Depiction of the hardware nodes and relations between them.
 
 ![Deployment View](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Deployment%20View.png)
 
@@ -55,7 +63,9 @@ Although the actual processing and event handling occur only in the client machi
 Since Leaflet is a library that is used in many web pages, its deployment is often made through a CDN, although it is also possible to include it in the server hosting the page.
 
 ##Process View
+
 The process view shows how the system handles run-time interacting processes.
+
 ![Process View](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Activity%20Diagram.png)
-As shown in the diagram, when Leaflet is started the map is loaded. The map loading consists in getting data from the map (for example, from Open Street Maps) and displaying the map according to the settings.
+As shown in the diagram, when Leaflet is started the map is loaded. The map loading consists in getting data from the map provider (for example, from OpenStreetMap) and displaying the map according to the settings.
 When the user interacts with the map, Leaflet will handle the event and display the information requested by the event. For instance, if the user drags the map, the show area will be different.
