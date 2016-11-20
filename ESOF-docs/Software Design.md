@@ -24,8 +24,10 @@ The logical view displays a package diagram. It represents the connections betwe
 *   **tile**: optional layer which allows the user to put a panel in top of the map;
 
 ##Development View
-Shows how the program is composed.
+Describes how the program is composed and the dependencies and relations between the different modules.
 ![Component View](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Component%20View.png)
+
+The **map**, which is the main module, is responsible for the creation of the map and uses every other component to build the final visualization. 
 
 ##Deployment View
 
