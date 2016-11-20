@@ -48,6 +48,8 @@ The **map** module, which is the main module, is responsible for the creation of
 
 ##Deployment View
 
+![Deployment View](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Deployment%20View.png)
+
 Although the actual processing and event handling occur only in the client machine, both Leaflet and the map using it have to be loaded. Frequently, the map is embedded in a web page and this is done by a request to a server, which hosts the page. Seeing that all scripting is client-side, this server can be a simple storage server (for instance, a *S3 bucket*).
 
 Since Leaflet is a library that is used in many web pages, its deployment is often made through a CDN, although it is also possible to include it in the server hosting the page.
