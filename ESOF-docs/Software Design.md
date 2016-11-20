@@ -4,9 +4,23 @@
 
 ##Introduction
 
-Leaflet follows the model view controller architecture. It separates the handling of mouse interaction from geometry that is shown on the map and others.
-One architectural pattern this project follows is **Repository architecture**. This allows changes to be propagated easily between all components.
-Another pattern is **Client Server architecture**. The program sends a request to popular websites to get map data.
+This assignment covers the software architecture side, the 4+1 architectural view model and architectural patterns that the Leaflet uses. **Software architecture** is the fundamental organization of a system, embodied in its components, their relationships to each other and the environment, and the principles governing its design and evolution. In other words, it summarizes all the important decisions about the organization of the system.
+The **4+1 Architectural view model** is a set of views composed of:
+*   Logical view
+*   Development view
+*   Deployment view
+*   Process view
+
+![4+1 View Model](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/4%2B1architechture.png)
+
+These represent different approaches to the organization and behavior of the software system.
+
+The definition of a pattern is a means of representing, sharing and reusing knowledge. **Architectural pattern**(or architectural style) following that line of thought, is a stylized description of good architectural design practice, which has been tried and tested in different environments.
+Leaflet follows the **model view controller architecture**. It separates the handling of mouse interaction from geometry that is shown on the map and others.
+Another architectural pattern this project follows is **Repository architecture**. This allows changes to be propagated easily between all components. This pattern is vital for the working model used in Leaflet which allows developers to manipulate a copy of the program so as to implement a feature or correcting a issue.
+**Client Server architecture** is also a architectural pattern followed by Leaflet. The program sends a request to popular websites to get map data.
+Lastly, **Layered architecture** is also implemented. Leaflet has a map class which uses all the elements in the layer below it.
+
 
 ##Logical View
 The logical view displays a package diagram. It represents the connections between each package and shows how the source code is organized.
@@ -27,7 +41,7 @@ The logical view displays a package diagram. It represents the connections betwe
 Describes how the program is composed and the dependencies and relations between the different modules.
 ![Component View](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/Component%20View.png)
 
-The **map**, which is the main module, is responsible for the creation of the map and uses every other component to build the final visualization. 
+The **map**, which is the main module, is responsible for the creation of the map and uses every other component to build the final visualization.
 
 ##Deployment View
 
