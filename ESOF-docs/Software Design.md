@@ -4,7 +4,8 @@
 
 ##Introduction
 
-This assignment covers the software architecture side, the 4+1 architectural view model and architectural patterns that the Leaflet uses. **Software architecture** is the fundamental organization of a system, embodied in its components, their relationships to each other and the environment, and the principles governing its design and evolution. In other words, it summarizes all the important decisions about the organization of the system.
+This assignment covers the software architecture side, the 4+1 architectural view model and the architectural patterns that Leaflet uses. **Software architecture** is the fundamental organization of a system, embodied in its components, their relationships to each other and the environment, and the principles governing its design and evolution. In other words, it summarizes all the important decisions about the organization of the system.
+
 The **4+1 Architectural view model** is a set of views composed of:
 *   Logical view
 *   Development view
@@ -13,7 +14,7 @@ The **4+1 Architectural view model** is a set of views composed of:
 
 ![4+1 View Model](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/4%2B1architechture.png)
 
-These represent different approaches to the organization and behavior of the software system.
+These diagrams represent different approaches to the organization and behavior of the software system.
 
 The definition of a pattern is a means of representing, sharing and reusing knowledge. **Architectural pattern**(or architectural style) following that line of thought, is a stylized description of good architectural design practice, which has been tried and tested in different environments.
 Leaflet follows the **model view controller architecture**. It separates the handling of mouse interaction from geometry that is shown on the map and others.
