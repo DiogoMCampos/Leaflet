@@ -5,6 +5,12 @@
 ##Software Testability and Reviews
 
 ##Test Statistics and analytics
+As mentioned before, Leaflet uses Jake. With this build tool, tests can be easily executed as well as test coverage.
+There are arround 540 tests executed on Leaflet's test suite. This tests cover several components. However, this is not enough to assure that Leaflet is working well. In order to check this, it is necessary to check test coverage.
+The test coverage results are shown below:
+![Test Coverage](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/TestCoverage.png)
+As seen in the results, Leaflet tests have a good coverage with an average of 70%. However, some components could have a better coverage, for exemple the Handler which has a lower coverage.
+
 
 ##Bug identification and correction
 
