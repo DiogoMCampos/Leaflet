@@ -5,7 +5,19 @@
 ##Software Testability and Reviews
 
 ###Controllability
-For Leaflet, running test cases are very simple. It is described in the [CONTRIBUTING.md](https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md) file and it says that the tester only needs to install nodeJS package called Jake and then run the command 'jake test --cov'.
+For Leaflet, running test cases are very simple. It is described in the [CONTRIBUTING.md](https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md) file and it says that the tester only needs to install nodeJS package called Jake and then run the command:
+```
+jake test --cov
+```
+Another option is simply to open ```spec/index.html```
+that makes use of mocha nodeJS manager and the tests will run automatically.
+
+###Observability
+To get a detailed overview of the test coverage, Jake will provide the overall details from each folder including statements, branches, functions and lines.
+In the case of ```spec/index.html```, the tests will indicate specifically which test fails and passes though, it will not indicate test coverage.
+
+###Isolateability
+
 
 ##Test Statistics and analytics
 As mentioned before, Leaflet uses Jake. With this build tool, tests can be easily executed as well as test coverage.
