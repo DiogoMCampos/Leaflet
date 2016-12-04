@@ -22,6 +22,7 @@ On the other hand, there are some tests that are state-dependent and thus don't 
 
 ###Observability
 * Ability to easily observe the test results
+
 By running tests in ```spec/index.html```, the page will indicate specifically which test failed and which ones passed, showing the expected and the obtained results, although it will not indicate test coverage.
 
 To get a detailed overview of the test coverage, Jake will provide the overall details from each folder, including statements, branches, functions and lines, in the file ```coverage/<environment>/index.html```.
@@ -30,6 +31,7 @@ The tests results are easily observable, as it is easy to understand what is the
 
 ###Isolateability
 * Ability to test specific components in isolation
+
 Leaflet is organized into modules and the isolateability depends on the complexity of the module. For the simpler ones, the tests have high isolateability, while the higher level ones have multiple dependencies that makes it harder to isolate them.
 
 The Leaflet tests adopt the following pattern: 
