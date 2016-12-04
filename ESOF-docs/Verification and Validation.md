@@ -5,14 +5,38 @@
 ##Software Testability and Reviews
 
 ###Controllability
-Leaflet's tests are flexible and malleable.
+* Ability to easily control the inputs to produce a specific output
+
+Leaflet's tests are generally flexible and easily malleable, although for specific modules modifying them is more difficult.
+
+The following snippet, which tests the function ```L.Util.splitWords()```, is an example of an easily controllable test. In this paticular scenario, the function splits the string *'foo bar baz'* into the array *['foo', 'bar', 'baz']* and if we wanted to obtain the array *['esof', 'docs']* we would simply input the string *'esof docs'*.
+```javascript
+describe('#splitWords', function () {
+	it('splits words into an array', function () {
+		expect(L.Util.splitWords('foo bar baz')).to.eql(['foo', 'bar', 'baz']);
+	});
+});
+ ```
+ 
+On the other hand, there are some tests that are state-dependent and thus don't have high controllability. Since JavaScript has multiple implementations depending on the browser, some functionalities have to be tested for each of the specific browsers (we talk about this in detail in the Heterogeneity section). We consider that Leaflet handles this issue very well, by enabling the user to run the tests in the desired browsers.
 
 ###Observability
-To get a detailed overview of the test coverage, Jake will provide the overall details from each folder including statements, branches, functions and lines.
-In the case of ```spec/index.html```, the tests will indicate specifically which test fails and passes though, it will not indicate test coverage.
+* Ability to easily observe the test results
+By running tests in ```spec/index.html```, the page will indicate specifically which test failed and which ones passed, showing the expected and the obtained results, although it will not indicate test coverage.
 
-###Isolate ability
-The Leaflet tests adopt the following pattern: create a few objects necessary for the tests. After that it will analyze according to those objects. This means that there will be one or more tests that makes use of one or more object.
+To get a detailed overview of the test coverage, Jake will provide the overall details from each folder, including statements, branches, functions and lines, in the file ```coverage/<environment>/index.html```.
+
+The tests results are easily observable, as it is easy to understand what is the expected output and the obtained one.
+
+###Isolateability
+* Ability to test specific components in isolation
+Leaflet is organized into modules and the isolateability depends on the complexity of the module. For the simpler ones, the tests have high isolateability, while the higher level ones have multiple dependencies that makes it harder to isolate them.
+
+The Leaflet tests adopt the following pattern: 
+* create a few objects necessary for the tests;
+* run tests and using those objects;
+
+This means that there will be one or more tests that makes use of one or more object, reducing the degree to which each test is isolated.
 
 ###Separation of Concerns
 Each test is responsible for a single functionality.
