@@ -5,7 +5,7 @@
 ##Software Testability and Reviews
 
 ###Controllability
-For Leaflet, running test cases IS very simple. It is described in the [CONTRIBUTING.md](https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md) file and the tester only needs to install PhantomJS and a Node.js package called Jake. 
+For Leaflet, running test cases IS very simple. It is described in the [CONTRIBUTING.md](https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md) file and the tester only needs to install PhantomJS and a Node.js package called Jake.
 
 To run the tests, run the command:
 ```
@@ -44,6 +44,9 @@ As seen in the results, Leaflet tests have a good coverage with an average of 70
 
 
 ##Bug identification and correction
+In order to contribute to the repository we started by selecting a bug. We took a look into issue number [5116](https://github.com/Leaflet/Leaflet/issues/5116) and tried to figure out what was wrong. With the recommendations given we tried to correct and reached a similar solution that another user had reached. However, he said his solution didn't work. We tried to figure out what was wrong and we think we came to a conclusion. There were errors on the test scene provided, making it impossible to work. So we fixed the test scene and it worked out. We told them about our solution but until the deadline we don't know if our solution is acceptable.
+Since we were determined to fix a bug, we looked for another issue. We ran into issue number [5107](https://github.com/Leaflet/Leaflet/issues/5107) and tested. We tested on the platforms the user said (Chrome Beta and Android 7.0) and our output didn't match the user's output. We got the desired output (same as other browsers and platforms) so we commented the issue. 
+
 
 ##Group members
 *   [Bruno Barros](https://github.com/BrunoBarros21) - up201405249@fe.up.pt
