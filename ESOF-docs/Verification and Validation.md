@@ -21,7 +21,8 @@ Each test is responsible for a single functionality.
 Using the ```spec/index.html```, there is a brief description to the test being done. Another testing method would not display a description of the tests.
 
 ###Heterogeneity
-In Leaflet the tests are heterogeneous since the tests don't always follows the same type of test, changing the way the code is tested. 
+Heterogeneity is when different technologies require different test cases.
+In Leaflet the tests are heterogeneous since the tests don't always follows the same type of test, changing the way the code is tested. Since Leaflet can run on different browsers and browsers use different Javascript implementations, there are browser specific tests. In order to execute the tests in a specific browser, a flag should be added to the command, for example: ```jake test --chrome```. This way, the test will be executed on Chrome and the results are going to be displayed on the console. If no browser is selected, the test environment will only run browser-unrelated tests.
 
 ##Test Statistics and analytics
 For Leaflet, running test cases is very simple. It is described in the [CONTRIBUTING.md](https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md) file and the tester only needs to install PhantomJS and a Node.js package called Jake.
@@ -46,9 +47,9 @@ As seen in the results, Leaflet tests have a good coverage with an average of 70
 
 
 ##Bug identification and correction
-In order to contribute to the repository we started by trying to find a bug that wasn't descripted in the issues but that wasn't easy so after a long time searching and trying we gave up and we opted by selecting a bug. 
+In order to contribute to the repository we started by trying to find a bug that wasn't descripted in the issues but that wasn't easy so after a long time searching and trying we gave up and we opted by selecting a bug.
 We took a look into issue number [5116](https://github.com/Leaflet/Leaflet/issues/5116) and tried to figure out what was wrong. With the recommendations given we tried to correct and reached a similar solution that another user had reached. However, he said his solution didn't work. We tried to figure out what was wrong and we think we came to a conclusion. There were errors on the test scene provided, making it impossible to work. So we fixed the test scene and it worked out. We told them about our solution but until the deadline we don't know if our solution is acceptable.
-Since we were determined to fix a bug, we looked for another issue. We ran into issue number [5107](https://github.com/Leaflet/Leaflet/issues/5107) and tested. We tested on the platforms the user said (Chrome Beta and Android 7.0) and our output didn't match the user's output. We got the desired output (same as other browsers and platforms) so we commented the issue. 
+Since we were determined to fix a bug, we looked for another issue. We ran into issue number [5107](https://github.com/Leaflet/Leaflet/issues/5107) and tested. We tested on the platforms the user said (Chrome Beta and Android 7.0) and our output didn't match the user's output. We got the desired output (same as other browsers and platforms) so we commented the issue.
 
 
 ##Group members
