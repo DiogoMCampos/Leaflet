@@ -47,8 +47,11 @@ Each test is responsible for a single functionality.
 Using the ```spec/index.html```, there is a brief description to the test being done. Another testing method would not display a description of the tests.
 
 ###Heterogeneity
-Heterogeneity is when different technologies require different test cases.
-In Leaflet the tests are heterogeneous since the tests don't always follows the same type of test, changing the way the code is tested. Since Leaflet can run on different browsers and browsers use different Javascript implementations, there are browser specific tests. In order to execute the tests in a specific browser, a flag should be added to the command, for example: ```jake test --chrome```. This way, the test will be executed on Chrome and the results are going to be displayed on the console. If no browser is selected, the test environment will only run browser-unrelated tests.
+* Heterogeneity is when different technologies require different test cases.
+
+As mentioned in the Controllability section, Leaflet can run on different browsers and each of them has a different JavaScript implementation, requiring browser-specific tests. In order to execute the tests in a specific browser, a flag should be added to the command, for example: ```jake test --chrome```. This way, the test will be executed on Chrome and the results are going to be displayed on the console. If no browser is selected, the test environment will run in the PhantomJS engine.
+
+In Leaflet the tests are heterogeneous since the tests don't always follows the same type of test, changing the way the code is tested.
 
 ##Test Statistics and analytics
 For Leaflet, running test cases is very simple. It is described in the [CONTRIBUTING.md](https://github.com/Leaflet/Leaflet/blob/master/CONTRIBUTING.md) file and the tester only needs to install PhantomJS and a Node.js package called Jake.
