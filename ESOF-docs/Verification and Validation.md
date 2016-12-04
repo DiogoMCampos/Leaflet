@@ -9,7 +9,7 @@
 
 Leaflet's tests are generally flexible and easily malleable, although for specific modules modifying them is more difficult.
 
-The following snippet, which tests the function ```L.Util.splitWords()```, is an example of an easily controllable test. In this paticular scenario, the function splits the string *'foo bar baz'* into the array *['foo', 'bar', 'baz']* and if we wanted to obtain the array *['esof', 'docs']* we would simply input the string *'esof docs'*.
+The following snippet, which tests the function ```L.Util.splitWords()```, is an example of an easily controllable test. In this particular scenario, the function splits the string *'foo bar baz'* into the array *['foo', 'bar', 'baz']*. If the desired array was *['esof', 'docs']*, the input would be the string *'esof docs'*.
 ```javascript
 describe('#splitWords', function () {
 	it('splits words into an array', function () {
@@ -18,7 +18,7 @@ describe('#splitWords', function () {
 });
  ```
 
-On the other hand, there are some tests that are state-dependent and thus don't have high controllability. Since JavaScript has multiple implementations depending on the browser, some functionalities have to be tested for each of the specific browsers (we talk about this in detail in the Heterogeneity section). We consider that Leaflet handles this issue very well, by enabling the user to run the tests in the desired browsers.
+On the other hand, there are some tests that are state-dependent and thus don't have high controllability. Since JavaScript has multiple implementations depending on the browser, some functionalities have to be tested for each of the specific browsers (this will be talked about in detail in the Heterogeneity section).
 
 ###Observability
 *   Ability to easily observe the test results
@@ -75,8 +75,15 @@ As seen in the results, Leaflet tests have a good coverage with an average of 70
 
 ##Bug identification and correction
 In order to contribute to the repository we started by trying to find a bug that wasn't described in the issues but that wasn't easy so after a long time searching and trying we gave up and we opted by selecting a bug.
-We took a look into issue number [5116](https://github.com/Leaflet/Leaflet/issues/5116) and tried to figure out what was wrong. With the recommendations given we tried to correct and reached a similar solution that another user had reached. However, he said his solution didn't work. We tried to figure out what was wrong and we think we came to a conclusion. There were errors on the test scene provided, making it impossible to work. So we fixed the test scene and it worked out. We told them about our solution but until the deadline we don't know if our solution is acceptable.
-Since we were determined to fix a bug, we looked for another issue. We ran into issue number [5107](https://github.com/Leaflet/Leaflet/issues/5107) and tested. We tested on the platforms the user said (Chrome Beta and Android 7.0) and our output didn't match the user's output. We got the desired output (same as other browsers and platforms) so we commented the issue.
+We took a look into issue number [5116](https://github.com/Leaflet/Leaflet/issues/5116) and tried to figure out what was wrong. 
+With the recommendations given we tried to correct and reached a similar solution that another user had reached. However, the tester said his solution didn't work. We tried to figure out what was wrong and we think we came to a conclusion. There were errors on the test scene provided, making it impossible to work. 
+So we fixed the test scene and it worked out. We told them about our solution but until the deadline we don't know if our solution is acceptable.
+Since we were determined to fix a bug, we looked for another issue. We ran into issue number [5107](https://github.com/Leaflet/Leaflet/issues/5107) and tested. 
+We tested on the platforms the user said (Chrome Beta and Android 7.0) and our output didn't match the user's output. 
+We got the desired output (same as other browsers and platforms) so we commented the issue.
+But for us, it didn't seem to be a bug fixing so we searched another time for another issue and we have found the issue number [5149](https://github.com/Leaflet/Leaflet/issues/5149).
+It was tested and we figured out by adding the option ``` noWrap: true``` to the example would make it work as expected without modifying anything in the library.
+While we tried to solve the error, we discovered that forcing a range the way the developers tried to do was not the correct once they were not confirming if the two point realtives to the area selectioned (nw and se) were in the same range.
 
 
 ##Group members
