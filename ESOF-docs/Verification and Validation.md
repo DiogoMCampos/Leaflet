@@ -74,16 +74,19 @@ As seen in the results, Leaflet tests have a good coverage with an average of 70
 
 
 ##Bug identification and correction
-In order to contribute to the repository we started by trying to find a bug that wasn't described in the issues. However, after a long time without any results, we gave up and opted by selecting a bug.
-We took a look into issue number [5116](https://github.com/Leaflet/Leaflet/issues/5116) and tried to figure out what was wrong.
-With the recommendations given we tried to correct and reached a similar solution that another user had reached. However, the tester said his solution didn't work. We tried to figure out what was wrong and we think we came to a conclusion. There were errors on the test scene provided, making it impossible to work.
-So we fixed the test scene and it worked out. We told them about our solution but until the deadline we don't know if our solution is acceptable.
-We were determined to fix a bug, and so we looked for another issue. We ran into issue number [5107](https://github.com/Leaflet/Leaflet/issues/5107).
-We tested on the platforms the user cited (Chrome Beta and Android 7.0) and our output didn't match the user's output.
+In order to contribute to the repository we started by trying to find a bug that wasn't described in the issues. However, after a long time without any results, we opted by selecting a bug from the issues list.
+We took a look into issue [5116](https://github.com/Leaflet/Leaflet/issues/5116) and tried to figure out what was wrong.
+With the recommendations given we tried to correct and reached a similar solution that another user had already reached. However, that tester said his solution didn't work, so we tried to figure out what was wrong and we think we came to a conclusion: there were errors on the test scene provided, making it impossible to work.
+So we fixed the test scene and it worked out. We left a comment with our solution,
+
+We were determined to fix a bug, and so we looked for another issue. We ran into issue [5107](https://github.com/Leaflet/Leaflet/issues/5107).
+We tested on the platforms the user cited (Chrome Beta and Android 7.0) and our output didn't match the user's.
 We got the desired output (same as other browsers and platforms) so we commented the issue.
-However, for us, it didn't seem to be a bug fixing so we searched another time for another issue and we found the issue  [5149](https://github.com/Leaflet/Leaflet/issues/5149).
-It was tested and by adding the option ``` noWrap: true``` to the example the test would provide the expected result without modifying anything in the library.
-While we tried to solve the error, we discovered that forcing a range the same way as the developers wasn't correct since they didn't confirm if the two point relatives to the area selected (nw and se) were in the same range.
+
+However, we didn't consider those to be *fixed* so we tried a different issue: [5149](https://github.com/Leaflet/Leaflet/issues/5149).
+It was tested and by adding the option ``` noWrap: true``` to the example the test would provide the expected result without modifying anything in the library. While trying to solve the error, we discovered that forcing a range the same way as the developers wasn't correct since they didn't confirm if the two point relatives to the area selected (nw and se) were in the same range. This is exemplified in our comment in the issue link, so the best way to understand our thinking process is to read that comment.
+
+We ended up correcting the bug mentioned in our comment and submitted a pull request [5164](https://github.com/Leaflet/Leaflet/pull/5164).
 
 
 ##Group members
