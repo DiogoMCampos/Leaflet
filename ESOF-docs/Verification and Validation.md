@@ -16,7 +16,16 @@ that makes use of mocha nodeJS manager and the tests will run automatically.
 To get a detailed overview of the test coverage, Jake will provide the overall details from each folder including statements, branches, functions and lines.
 In the case of ```spec/index.html```, the tests will indicate specifically which test fails and passes though, it will not indicate test coverage.
 
-###Isolateability
+###Isolate ability
+The Leaflet tests adopt the following pattern: create a few objects necessary for the tests. After that it will analyze according to those objects. This means that there will be one or more tests that makes use of one or more object.
+
+###Separation of Concerns
+Each test is responsible for a single functionality.
+
+###Understandability
+Using the ```spec/index.html```, there is a brief description to the test being done. Another testing method would not display a description of the tests.
+
+###Heterogeneity
 
 
 ##Test Statistics and analytics
