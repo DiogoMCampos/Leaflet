@@ -23,7 +23,7 @@ On the other hand, there are some tests that are state-dependent and thus don't 
 ###Observability
 *   Ability to easily observe the test results
 
-By running tests in ```spec/index.html```, the page will indicate specifically which tests failed and which ones passed, showing the expected and the obtained results, although it will not indicate test coverage.
+By running tests in ```spec/index.html```, the page will indicate specifically which tests failed and which ones passed, showing the expected and the obtained results, although it won't indicate test coverage.
 
 To get a detailed overview of the test coverage, Jake will provide the overall details from each folder, including statements, branches, functions and lines, in the file ```coverage/<environment>/index.html```.
 
@@ -42,7 +42,7 @@ This means that there will be one or more tests that makes use of one or more ob
 As observed in the ```spec/suites/``` folder, there is a corresponding test file for each source file. Each test is responsible for a single functionality.
 
 ###Understandability
-Using the ```spec/index.html```, there is a brief description to the test being done. Another testing method would not display a description of the tests.
+Using the ```spec/index.html```, there is a brief description to the test being done. Another testing method wouldn't display a description of the tests.
 
 ###Heterogeneity
 *   Heterogeneity is when different technologies require different test cases.
@@ -67,23 +67,23 @@ jake test -cov
 Another option is simply to open ```spec/index.html``` that makes use of mocha nodeJS manager and the tests will run automatically.
 
 As mentioned before, Leaflet uses Jake. With this build tool, tests can be easily executed as well as test coverage.
-There are around 540 tests executed on Leaflet's test suite. This tests cover several components. However, this is not enough to assure that Leaflet is working well. In order to check this, it is necessary to check test coverage.
+There are around 540 tests executed on Leaflet's test suite. This tests cover several components. However, this isn't enough to assure that Leaflet is working well. In order to check this, it is necessary to check test coverage.
 The test coverage results are shown below:
 ![Test Coverage](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/TestCoverage.png)
 As seen in the results, Leaflet tests have a good coverage with an average of 70%. However, some components could have a better coverage, for example the Handler which has a lower coverage.
 
 
 ##Bug identification and correction
-In order to contribute to the repository we started by trying to find a bug that wasn't described in the issues but that wasn't easy so after a long time searching and trying we gave up and we opted by selecting a bug.
-We took a look into issue number [5116](https://github.com/Leaflet/Leaflet/issues/5116) and tried to figure out what was wrong. 
-With the recommendations given we tried to correct and reached a similar solution that another user had reached. However, the tester said his solution didn't work. We tried to figure out what was wrong and we think we came to a conclusion. There were errors on the test scene provided, making it impossible to work. 
+In order to contribute to the repository we started by trying to find a bug that wasn't described in the issues. However, after a long time without any results, we gave up and opted by selecting a bug.
+We took a look into issue number [5116](https://github.com/Leaflet/Leaflet/issues/5116) and tried to figure out what was wrong.
+With the recommendations given we tried to correct and reached a similar solution that another user had reached. However, the tester said his solution didn't work. We tried to figure out what was wrong and we think we came to a conclusion. There were errors on the test scene provided, making it impossible to work.
 So we fixed the test scene and it worked out. We told them about our solution but until the deadline we don't know if our solution is acceptable.
-Since we were determined to fix a bug, we looked for another issue. We ran into issue number [5107](https://github.com/Leaflet/Leaflet/issues/5107) and tested. 
-We tested on the platforms the user said (Chrome Beta and Android 7.0) and our output didn't match the user's output. 
+We were determined to fix a bug, and so we looked for another issue. We ran into issue number [5107](https://github.com/Leaflet/Leaflet/issues/5107).
+We tested on the platforms the user cited (Chrome Beta and Android 7.0) and our output didn't match the user's output.
 We got the desired output (same as other browsers and platforms) so we commented the issue.
-But for us, it didn't seem to be a bug fixing so we searched another time for another issue and we have found the issue number [5149](https://github.com/Leaflet/Leaflet/issues/5149).
-It was tested and we figured out by adding the option ``` noWrap: true``` to the example would make it work as expected without modifying anything in the library.
-While we tried to solve the error, we discovered that forcing a range the way the developers tried to do was not the correct once they were not confirming if the two point realtives to the area selectioned (nw and se) were in the same range.
+However, for us, it didn't seem to be a bug fixing so we searched another time for another issue and we found the issue  [5149](https://github.com/Leaflet/Leaflet/issues/5149).
+It was tested and by adding the option ``` noWrap: true``` to the example the test would provide the expected result without modifying anything in the library.
+While we tried to solve the error, we discovered that forcing a range the same way as the developers wasn't correct since they didn't confirm if the two point relatives to the area selected (nw and se) were in the same range.
 
 
 ##Group members
@@ -96,7 +96,7 @@ While we tried to solve the error, we discovered that forcing a range the way th
 
 |       **Names**   | **Percentage**|
 |:----------------:	|:------------:	|
-| Bruno Barros     	|           	|
-| Diogo Campos     	|           	|
-| Fabio Caramelo   	|           	|
-| William Fukunaga 	|           	|
+| Bruno Barros     	|       25%   	|
+| Diogo Campos     	|       25%   	|
+| Fabio Caramelo   	|       25%   	|
+| William Fukunaga 	|       25%   	|
