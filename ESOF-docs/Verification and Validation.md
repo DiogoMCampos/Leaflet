@@ -86,7 +86,7 @@ We got the desired output (same as other browsers and platforms) so we commented
 However, we didn't consider those to be *fixed* so we tried a different issue: [5149](https://github.com/Leaflet/Leaflet/issues/5149).
 It was tested and by adding the option ``` noWrap: true``` to the example the test would provide the expected result without modifying anything in the library. While trying to solve the error, we discovered that forcing a range the same way as the developers wasn't correct since they didn't confirm if the two point relatives to the area selected (nw and se) were in the same range. This is exemplified in our comment in the issue link, so the best way to understand our thinking process is to read that comment.
 
-We ended up correcting the bug mentioned in our comment and submitted a pull request [5164](https://github.com/Leaflet/Leaflet/pull/5164).
+We ended up correcting the bug mentioned in our comment and submitted a pull request: [5164](https://github.com/Leaflet/Leaflet/pull/5164).
 
 
 ##Group members
