@@ -1,0 +1,10 @@
+exclude:
+- /Jakefile.js
+- /build/.*
+- /debug/.*
+- /docs/.*
+- /spec/.*
+component_depth: 1
+languages:
+- javascript
+- script
