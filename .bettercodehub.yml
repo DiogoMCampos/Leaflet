@@ -1,4 +1,5 @@
 exclude:
+- /Jakefile.js
 - /build/.*
 - /debug/.*
 - /docs/.*
