@@ -3,6 +3,9 @@
 #Assignment 5: Software Maintenance/Evolution
 
 ##Software Maintainability
+In order to evaluate Software Maintainability we used the Better Code Hub service and this were the results:
+![Results](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/BCH%20Results.png)
+This service evaluates the repository on 10 different parameters. However, sometimes Better Code Hub does not evaluate the repository propertly. For instance, on our example we consider that some components such as "Write Simple Units of Code", "Keep Architecture Components Balanced" and "Automate Tests" were not evaluated correctly.
 
 ##Evolution Process
 
