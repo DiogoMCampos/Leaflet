@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Leaflet debug page</title>
+
+    <link rel="stylesheet" href="../../dist/leaflet.css" />
+
+    <link rel="stylesheet" href="../css/screen.css" />
+    <script type="text/javascript" src="../../build/deps.js"></script>
+    <script src="../../dist/leaflet-src.js"></script>
+</head>
+
+<body>
+    <div id="map" style="width: 1000px; height: 700px; border: 1px solid #ccc"></div>
+
+    <script src="route.js"></script>
+    <script>
+        var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            osm = L.tileLayer(osmUrl, {
+                maxZoom: 18,
+                attribution: osmAttrib
+            });
+
+        var map = new L.Map('map', {
+            layers: [osm]
+        });
+
+        // create a red polyline from an array of LatLng points
+        var latlngs = [
+            /*[45.51, 178.69],
+            [45.51, -172.68],
+            [37.77, -172.43],
+            [34.04, -168.2]*/
+        /*    [-33, 166],
+            [-33, 183],
+            [-48, 183],
+            [-48, 166]*/
+            [-33, 175],
+            [45, -175],
+            [55, -69]
+        ];
+        var polyline = L.polyline(latlngs, {
+            color: 'green',
+            wrap: true
+        }).addTo(map);
+        // zoom the map to the polyline
+        map.fitBounds(polyline.getBounds());
+    </script>
+</body>
+
+</html>

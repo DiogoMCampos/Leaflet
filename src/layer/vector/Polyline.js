@@ -48,7 +48,9 @@ L.Polyline = L.Path.extend({
 
 		// @option noClip: Boolean = false
 		// Disable polyline clipping.
-		noClip: false
+		noClip: false,
+
+		wrap: false
 	},
 
 	initialize: function (latlngs, options) {
@@ -177,14 +179,36 @@ L.Polyline = L.Path.extend({
 
 		for (var i = 0, len = latlngs.length; i < len; i++) {
 			if (flat) {
+				console.log('flat');
 				result[i] = L.latLng(latlngs[i]);
-				this._bounds.extend(result[i]);
+			//	this._bounds.extend(result[i]);
 			} else {
+				console.log('no flat');
 				result[i] = this._convertLatLngs(latlngs[i]);
 			}
 		}
 
+		if (this.options.wrap) {
+			this._wrapCoordinates(result);
+		}
+		for (var j = 0; j < result.length; j++) {
+			this._bounds.extend(result[j]);
+			console.log(result[j]);
+		}
+
 		return result;
+	},
+
+
+	_wrapCoordinates: function (coordinates) {
+		for (var i = 0; i < coordinates.length - 1; i++) {
+			if (Math.abs(coordinates[i].lng - coordinates[i + 1].lng) > 180) {
+				coordinates[i + 1].lng += 360;
+				this._bounds.extend(coordinates[i]);
+				this._bounds.extend(coordinates[i + 1]);
+			}
+
+		}
 	},
 
 	_project: function () {
