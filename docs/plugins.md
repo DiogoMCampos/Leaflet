@@ -291,6 +291,15 @@ Plugins for loading basemaps or GIS raster layers in common (albeit non-default)
 			<a href="https://github.com/geobricks/">Geobricks</a>
 		</td>
 	</tr>
+	<tr>
+		<td>
+			<a href="https://gitlab.com/IvanSanchez/Leaflet.TileLayer.MBTiles">Leaflet.TileLayer.MBTiles</a>
+		</td><td>
+			Loads <a href="https://github.com/mapbox/mbtiles-spec"><code>.mbtiles</code></a> tilesets.
+		</td><td>
+			<a href="https://github.com/IvanSanchez/">Iván Sánchez</a>
+		</td>
+	</tr>
 </table>
 
 
@@ -346,21 +355,24 @@ Sometimes you don't want to load a map, just big custom images. **Really** big o
 	</tr>
 	<tr>
 		<td>
-			<a href="https://github.com/IvanSanchez/Leaflet.MandelbrotGL">Leaflet.MandelbrotGL</a>
-		</td><td>
-			Renders the <a href="https://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot set</a> using WebGL (<a href="https://ivansanchez.github.io/Leaflet.MandelbrotGL/demo.html">demo</a>).
-		</td><td>
-			<a href="https://github.com/IvanSanchez">Iván Sánchez</a>
-		</td>
-	</tr>
-	<tr>
-		<td>
 			<a href="https://github.com/aparshin/leaflet-fractal">leaflet-fractal</a>
 		</td><td>
 			Renders some fractals (Mandelbrot set, Julia set and some others) using 2D canvas (<a href="http://aparshin.github.io/leaflet-fractal/">demo</a>).
 		</td><td>
 			<a href="https://github.com/aparshin">Alexander Parshin</a>
 		</td>
+	</tr>
+	<tr>
+	  <td>
+	    <a href="https://github.com/commenthol/leaflet-rastercoords">leaflet-rastercoords</a>
+	  </td><td>
+	    Renders large tiled images generated with
+	    <a href="http://github.com/commenthol/gdal2tiles-leaflet">gdal2tiles-leaflet</a>.
+	    Image raster coordinates can be used to set markers, etc.
+	    (<a href="http://commenthol.github.io/leaflet-rastercoords">demo</a>).
+	  </td><td>
+	    <a href="https://github.com/commenthol">Commenthol</a>
+	  </td>
 	</tr>
 </table>
 
@@ -452,6 +464,15 @@ The following plugins change the way that tile or image layers are displayed in 
 			A Leaflet control to add a split screen to compare two map overlays (<a href="http://lab.digital-democracy.org/leaflet-side-by-side/">demo</a>).
 		</td><td>
 			<a href="http://www.digital-democracy.org">Digital Democracy</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="https://gitlab.com/IvanSanchez/Leaflet.TileLayer.GL">Leaflet.TileLayer.GL</a>
+		</td><td>
+			Applies custom WebGL shaders to each tile in a tilelayer. Demos: <a href="http://ivansanchez.gitlab.io/Leaflet.TileLayer.GL/demo/demo-mandelbrot.html">Mandelbrot set</a>, <a href="http://ivansanchez.gitlab.io/Leaflet.TileLayer.GL/demo/demo-antitoner.html">manipulate tile colours</a>, <a href="http://ivansanchez.gitlab.io/Leaflet.TileLayer.GL/demo/demo-floow.html">elevation with terrain-RBG tiles</a>.
+		</td><td>
+			<a href="https://github.com/IvanSanchez">Iván Sánchez</a>
 		</td>
 	</tr>
 </table>
@@ -1245,6 +1266,17 @@ These plugins provide new markers or news ways of converting abstract data into 
 		</td>
 		<td>
 			<a href="https://github.com/mikhailshilkov">Mikhail Shilkov</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="https://github.com/yakitoritabetai/Leaflet.LabelTextCollision">Leaflet.LabelTextCollision</a>
+		</td>
+		<td>
+			Displays labels on paths (polylines, polygons, circles) avoiding label collision. (<a href="https://yakitoritabetai.github.io/Leaflet.LabelTextCollision/">demo</a>).
+		</td>
+		<td>
+			<a href="https://github.com/yakitoritabetai">Kenta Hakoishi</a>
 		</td>
 	</tr>
 </table>
@@ -3127,6 +3159,16 @@ The following plugins use external services to calculate driving or walking rout
 			<a href="http://www.nearest.place/">Nearest!</a>
 		</td>
 	</tr>
+	
+	<tr>
+    		<td>
+    			<a href="https://github.com/BKGiser/Leaflet.Routing.Amap">Leaflet.Routing.Amap</a>
+    		</td><td>
+		Control for route search using <a href="http://www.amap.com/">AMap(高德地图)</a> as a backend. Supports the Chinese BD09 and GCJ02 coordinate systems, colourful lines, and turn-by-turn popups.
+    		</td><td>
+    			<a href="https://github.com/BKGiser">Jack Good</a>
+    		</td>
+    	</tr>
 </table>
 
 
@@ -3241,7 +3283,7 @@ Plugin developers: please keep future plugins in individual repositories.
 		<td>
 			<a href="https://github.com/shramov/leaflet-plugins">Plugins by Pavel Shramov</a>
 		</td><td>
-			A set of plugins for: GPX, KML layers; Bing tile layer; Google and Yandex layers (implemented with their APIs), permalink and distance measurement controls.
+			A set of plugins for: GPX, KML, TOPOJSON layers; Bing tile layer; Yandex layers (implemented with their APIs), and permalink control.
 		</td><td>
 			<a href="https://github.com/shramov">Pavel Shramov</a>, <a href="https://github.com/brunob">Bruno B</a>
 		</td>
@@ -3437,6 +3479,24 @@ Ease your development integrating Leaflet into a development framework or automa
 			Trigger a jQuery UI dialog/modal using an on-map control.
 		</td><td>
 			<a href="https://github.com/gregallensworth">Greg Allensworth</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="https://github.com/mstahv/v-leaflet">V-Leaflet</a>
+		</td><td>
+			Use Leaflet as a component for the <a href='https://vaadin.com/home'>Vaadin</a> Java/HTML framework.
+		</td><td>
+			<a href="https://github.com/mstahv">Matti Tahvonen</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="https://github.com/gwidgets/gwty-leaflet">gwty-leaflet</a>
+		</td><td>
+			A Java/GWT JsInterop wrapper for Leaflet. It allows using Leaflet in Java the same way as from a javascript script.  
+		</td><td>
+			<a href="https://github.com/zak905">Zakaria Amine</a>
 		</td>
 	</tr>
 </table>
