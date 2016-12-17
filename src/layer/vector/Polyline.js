@@ -50,7 +50,9 @@ L.Polyline = L.Path.extend({
 		// Disable polyline clipping.
 		noClip: false,
 
-		wrap: false
+		// @option noWrap: Boolean = false
+		// When true wraps the polyline across the map if it has a shorter path
+		noWrap: false
 	},
 
 	initialize: function (latlngs, options) {
@@ -179,36 +181,68 @@ L.Polyline = L.Path.extend({
 
 		for (var i = 0, len = latlngs.length; i < len; i++) {
 			if (flat) {
-				console.log('flat');
 				result[i] = L.latLng(latlngs[i]);
-			//	this._bounds.extend(result[i]);
 			} else {
-				console.log('no flat');
 				result[i] = this._convertLatLngs(latlngs[i]);
 			}
 		}
 
-		if (this.options.wrap) {
-			this._wrapCoordinates(result);
-		}
-		for (var j = 0; j < result.length; j++) {
-			this._bounds.extend(result[j]);
-			console.log(result[j]);
+		if (this.options.noWrap) {
+			result = this._wrapCoordinates(result);
 		}
 
+		for (var j = 0; j < result.length; j++) {
+			this._bounds.extend(result[j]);
+		}
 		return result;
 	},
 
 
 	_wrapCoordinates: function (coordinates) {
+		var newCoords = [];
 		for (var i = 0; i < coordinates.length - 1; i++) {
 			if (Math.abs(coordinates[i].lng - coordinates[i + 1].lng) > 180) {
-				coordinates[i + 1].lng += 360;
-				this._bounds.extend(coordinates[i]);
-				this._bounds.extend(coordinates[i + 1]);
-			}
+				var angle;
+				if (coordinates[i + 1].lng > coordinates[i].lng) {
+					angle = Math.atan2(coordinates[i].lat - coordinates[i + 1].lat, coordinates[i].lng - (coordinates[i + 1].lng - 360));
+				} else {
+					angle = Math.atan2(coordinates[i].lat - coordinates[i + 1].lat, coordinates[i].lng - (coordinates[i + 1].lng + 360));
+				}
 
+				var newPoint = new L.LatLng(0, 0),
+				   newPoint2 = new L.LatLng(0, 0),
+				   dx, dx2, newLng, newLng2;
+
+				if (coordinates[i].lng < 0) {
+					dx = -180 - coordinates[i].lng;
+					newLng = -180;
+					dx2 = 180 - coordinates[i + 1].lng;
+					newLng2 = 180;
+				} else {
+					dx = 180 - coordinates[i].lng;
+					newLng = 180;
+					dx2 = -180 - coordinates[i + 1].lng;
+					newLng2 = -180;
+				}
+
+				newPoint.lat = coordinates[i].lat + Math.tan(angle) * dx;
+				newPoint.lng = newLng;
+				newCoords[i] = coordinates[i];
+				newCoords[i + 1] = newPoint;
+				newCoords[i + 3] = coordinates[i + 1];
+				newPoint2.lat = coordinates[i + 1].lat + Math.tan(angle) * dx2;
+				newPoint2.lng = newLng2;
+				newCoords[i + 2] = newPoint2;
+
+				newCoords[i + 2].newRing = true;
+				i++;
+			} else {
+				newCoords.push(coordinates[i]);
+			}
 		}
+		newCoords.push(coordinates[i]);
+
+		return newCoords;
 	},
 
 	_project: function () {
@@ -230,13 +264,17 @@ L.Polyline = L.Path.extend({
 	_projectLatlngs: function (latlngs, result, projectedBounds) {
 		var flat = latlngs[0] instanceof L.LatLng,
 		    len = latlngs.length,
-		    i, ring;
-
+		    i, ring, last = 0;
 		if (flat) {
 			ring = [];
 			for (i = 0; i < len; i++) {
-				ring[i] = this._map.latLngToLayerPoint(latlngs[i]);
-				projectedBounds.extend(ring[i]);
+				if (latlngs[i].newRing) {
+					result.push(ring);
+					last = i;
+					ring = [];
+				}
+				ring[i - last] = this._map.latLngToLayerPoint(latlngs[i]);
+				projectedBounds.extend(ring[i - last]);
 			}
 			result.push(ring);
 		} else {

@@ -20,7 +20,8 @@
             osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             osm = L.tileLayer(osmUrl, {
                 maxZoom: 18,
-                attribution: osmAttrib
+                attribution: osmAttrib,
+                noWrap: false
             });
 
         var map = new L.Map('map', {
@@ -33,17 +34,16 @@
             [45.51, -172.68],
             [37.77, -172.43],
             [34.04, -168.2]*/
-        /*    [-33, 166],
-            [-33, 183],
-            [-48, 183],
-            [-48, 166]*/
-            [-33, 175],
+        /*    [-33, 175],
             [45, -175],
-            [55, -69]
+            [55, -69]*/
+            [34.052235, -118.243683],
+            [-33.865143, 151.209900],
+            [38.736946, -9.142685]
         ];
         var polyline = L.polyline(latlngs, {
             color: 'green',
-            wrap: true
+            noWrap: true
         }).addTo(map);
         // zoom the map to the polyline
         map.fitBounds(polyline.getBounds());
