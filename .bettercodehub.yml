@@ -4,7 +4,7 @@ exclude:
 - /debug/.*
 - /docs/.*
 - /spec/.*
-component_depth: 1
+component_depth: 2
 languages:
 - javascript
 - script
