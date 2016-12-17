@@ -2,10 +2,48 @@
 
 #Assignment 5: Software Maintenance/Evolution
 
-##Software Maintainability
-In order to evaluate Software Maintainability we used the Better Code Hub service and this were the results:
+##Software Evolution and Maintainability
+As errors appear, new features are requested or performance needs to be improved, software systems need to evolve. This proves costly to many organizations, as many man-hours can be needed to perform the needed changes.
+
+Leaflet, as an open-source project, benefits from the support of the community to both identify these changes and implement them, which may help reduce this cost. On the other hand, having the input of so many different users and developers requires the core team to keep the code quality up and the software maintainable.
+
+##Better Code hub
+In order to evaluate Software Maintainability, i used the Better Code Hub service and this were the results:
 ![Results](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/BCH%20Results.png)
-This service evaluates the repository on 10 different parameters. However, sometimes Better Code Hub does not evaluate the repository propertly. For instance, on our example we consider that some components such as "Write Simple Units of Code", "Keep Architecture Components Balanced" and "Automate Tests" were not evaluated correctly.
+This service analyses the repository on 10 different parameters, although for some projects some of the properties are not evaluated properly.  
+
+###Automate Tests
+Better Code Hub only checks tests for Java and C# currently, which leads to Leaflet failing this section due to being a JavaScript project.
+
+Manually, we checked the number of lines and asserts (*expect*) in four random test files and compared them to the number of lines in their source code equivalent (including comments) following the criteria used by Better Code Hub. 
+
+According to BetterCodeHub, Leaflet has 7352 lines of code, so as a medium system, the number of lines of test code should be **50%** of the number of lines of source code and the assert density shoult be at least **1%**.
+
+####TileLayer:
+* */src/layer/tile/TileLayer.js*: 281 lines.
+* */spec/suites/layer/tile/TileLayerSpec.js*: 470 lines and 32 expect.
+* Percentage of test code lines: 167%.
+* Assert Density: 6.8%
+
+####Events:
+* */src/core/Events.js*: 289 lines.
+* */spec/suites/core/EventsSpec.js*: 607 lines and 96 expect.
+* Pertentage of code lines: 241%
+* Assert Density: 15.8%
+
+####Bounds:
+* */src/geometry/Bounds.js*: 155 lines.
+* */spec/suites/geometry/BoundsSpec.js*: 87 lines and 20 expect.
+* Percentage of test code lines: 56.1%
+* Assert Density: 23%
+
+####LatLng:
+* */src/geo/LatLng.js*: 129 lines.
+* */spec/suites/geo/LatLngSpec.js*: 140 lines and 32 expect.
+* Percentage of test code lines: 108.5%
+* Assert Density: 22.9%
+
+Considering this results we believe that Leaflet would pass this section if it was supported by Better Code Hub.
 
 ##Evolution Process
 On this last assignment it was asked to evolve a feature. Since we wanted to be helpful to the main team, we contacted them and asked them for a feature they would like to be implemented on Leaflet. One of the features they would like to see on Leaflet was related to Polyline wrapping. Polylines are used to draw lines between given points on a map and we were asked to add the option to wrap this coordinates. If this option is enabled and two points are separated in longitude by more than 180 degrees, this points will not cross the entire map but will take the shortest path around the map.
