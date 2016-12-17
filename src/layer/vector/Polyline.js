@@ -240,7 +240,7 @@ L.Polyline = L.Path.extend({
 				newCoords.push(coordinates[i]);
 			}
 		}
-		newCoords.push(coordinates[i]);
+		newCoords.push(coordinates[coordinates.length - 1]);
 
 		return newCoords;
 	},
