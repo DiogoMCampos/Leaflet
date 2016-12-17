@@ -199,49 +199,71 @@ L.Polyline = L.Path.extend({
 
 
 	_wrapCoordinates: function (coordinates) {
-		var newCoords = [];
+		var newCoords = [], j = 0;
+
 		for (var i = 0; i < coordinates.length - 1; i++) {
-			if (Math.abs(coordinates[i].lng - coordinates[i + 1].lng) > 180) {
-				var angle;
-				if (coordinates[i + 1].lng > coordinates[i].lng) {
-					angle = Math.atan2(coordinates[i].lat - coordinates[i + 1].lat, coordinates[i].lng - (coordinates[i + 1].lng - 360));
+<<<<<<< HEAD
+<<<<<<< HEAD
+			var coord = coordinates[i], next = coordinates[i + 1];
+			if (Math.abs(coord.lng - next.lng) > 180) {
+				var width, dx, dx2, newLng, newLng2;
+
+				if (next.lng > coord.lng) {
+					width = -360 + (next.lng - coord.lng);
 				} else {
-					angle = Math.atan2(coordinates[i].lat - coordinates[i + 1].lat, coordinates[i].lng - (coordinates[i + 1].lng + 360));
+					width = 360 + (next.lng - coord.lng);
 				}
+				var angle = Math.atan2(next.lat - coord.lat, width);
+				if (coord.lng < next.lng) {
+=======
+			var coord = coordinates[i], next = coordinates[i+1];
+=======
+			var coord = coordinates[i], next = coordinates[i + 1];
+>>>>>>> 9ed70dd... Removed some unnecessary conditions
+			if (Math.abs(coord.lng - next.lng) > 180) {
+				var width, dx, dx2, newLng, newLng2;
 
-				var newPoint = new L.LatLng(0, 0),
-				   newPoint2 = new L.LatLng(0, 0),
-				   dx, dx2, newLng, newLng2;
+				if (next.lng > coord.lng) {
+					width = -360 + (next.lng - coord.lng);
+				} else {
+					width = 360 + (next.lng - coord.lng);
+				}
+<<<<<<< HEAD
+				angle = Math.atan2(next.lat - coord.lat, width);
 
-				if (coordinates[i].lng < 0) {
-					dx = -180 - coordinates[i].lng;
+				if (coord.lng < next.lng ) {
+>>>>>>> f7bd382... polyline wrapping around the map
+=======
+				var angle = Math.atan2(next.lat - coord.lat, width);
+				if (coord.lng < next.lng) {
+>>>>>>> 9ed70dd... Removed some unnecessary conditions
+					dx = -180 - coord.lng;
 					newLng = -180;
-					dx2 = 180 - coordinates[i + 1].lng;
-					newLng2 = 180;
+					dx2 = 180 - next.lng;
 				} else {
-					dx = 180 - coordinates[i].lng;
+					dx = 180 - coord.lng;
 					newLng = 180;
-					dx2 = -180 - coordinates[i + 1].lng;
-					newLng2 = -180;
+					dx2 = -180 - next.lng;
 				}
 
-				newPoint.lat = coordinates[i].lat + Math.tan(angle) * dx;
-				newPoint.lng = newLng;
-				newCoords[i] = coordinates[i];
-				newCoords[i + 1] = newPoint;
-				newCoords[i + 3] = coordinates[i + 1];
-				newPoint2.lat = coordinates[i + 1].lat + Math.tan(angle) * dx2;
-				newPoint2.lng = newLng2;
-				newCoords[i + 2] = newPoint2;
+				newLng2 = -newLng;
+				newCoords[j++] = coord;
+				newCoords[j++] = new L.LatLng(coord.lat + Math.tan(angle) * dx, newLng);
+				newCoords[j] = new L.LatLng(next.lat + Math.tan(angle) * dx2, newLng2);
+				newCoords[j++].newRing = true;
 
-				newCoords[i + 2].newRing = true;
-				i++;
 			} else {
-				newCoords.push(coordinates[i]);
+				newCoords[j++] = coord;
 			}
 		}
-		newCoords.push(coordinates[i]);
+		newCoords.push(coordinates[coordinates.length - 1]);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 297ba27... fix on wrapCoordinates
+=======
+>>>>>>> f7bd382... polyline wrapping around the map
 		return newCoords;
 	},
 
