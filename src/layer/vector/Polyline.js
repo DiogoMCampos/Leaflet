@@ -202,18 +202,17 @@ L.Polyline = L.Path.extend({
 		var newCoords = [], j = 0;
 
 		for (var i = 0; i < coordinates.length - 1; i++) {
-			var coord = coordinates[i], next = coordinates[i+1];
+			var coord = coordinates[i], next = coordinates[i + 1];
 			if (Math.abs(coord.lng - next.lng) > 180) {
 				var width, dx, dx2, newLng, newLng2;
 
-				if ((next.lng > coord.lng && next.lat > coord.lat) || (next.lng > coord.lng && next.lat < coord.lat)) {
-                    width = -360 + (next.lng - coord.lng);
-            	} else{
+				if (next.lng > coord.lng) {
+					width = -360 + (next.lng - coord.lng);
+				} else {
 					width = 360 + (next.lng - coord.lng);
 				}
-				angle = Math.atan2(next.lat - coord.lat, width);
-
-				if (coord.lng < next.lng ) {
+				var angle = Math.atan2(next.lat - coord.lat, width);
+				if (coord.lng < next.lng) {
 					dx = -180 - coord.lng;
 					newLng = -180;
 					dx2 = 180 - next.lng;

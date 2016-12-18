@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div id="map" style="width: 1000px; height: 700px; border: 1px solid #ccc"></div>
+    <div id="mapid" style="width: 1000px; height: 700px; border: 1px solid #ccc"></div>
 
     <script src="route.js"></script>
     <script>
@@ -27,7 +27,7 @@
             noWrap:false
         }).addTo(mymap);
 
-        var pointA = new L.LatLng(35.00, 140.0);
+        var pointA = new L.LatLng(20.00, 140.0);
         var pointB = new L.LatLng(50.00, -120.0);
         var pointC = new L.LatLng(70.50, 170.0);
         var pointList = [pointA, pointB, pointC];
