@@ -1,4 +1,5 @@
 ![FEUP image](https://sigarra.up.pt/feup/pt/WEB_GESSI_DOCS.download_file?p_name=F-370784536/logo_cores_oficiais.jpg)
+![SIG logo](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/SIG.png)
 
 #Assignment 5: Software Maintenance/Evolution
 
@@ -13,6 +14,7 @@ In order to evaluate Software Maintainability, i used the Better Code Hub servic
 This service analyses the repository on 10 different parameters, although for some projects some of the properties are not evaluated properly.  
 
 ###Automate Tests
+![Automate Tests](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/9.AutomateTests.png)
 Better Code Hub only checks tests for Java and C# currently, which leads to Leaflet failing this section due to being a JavaScript project.
 
 Manually, we checked the number of lines and asserts (*expect*) in four random test files and compared them to the number of lines in their source code equivalent (including comments) following the criteria used by Better Code Hub.
@@ -44,6 +46,18 @@ According to BetterCodeHub, Leaflet has 7352 lines of code, so as a medium syste
 *   Assert Density: 22.9%
 
 Considering this results we believe that Leaflet would pass this section if it was supported by Better Code Hub.
+
+###Simple Units of Code
+![Simple Units of Code](https://github.com/DiogoMCampos/Leaflet/blob/ESOF-Documentation/ESOF-docs/resources/2.%20SimpleUnits.png?raw=true)
+In this chapter, Better Code Hub verifys the existence of branch points (if, for, while, etc.) and Leaflet fails because of the excessive using of this conditions.
+
+Leaflet uses specially the ``if`` condition due to possibility of activate or desactivate different features. Cycles ``for`` are excessively used too.
+
+In Resume Leaflet passed with almost every test sucssefully evaluated, despite the two mentioned above. 
+
+With all of the tests Better Code Hub provided it's possible to see Leaflet has a clean, small and structured code with no repetitions of the same. Leaflet also don't have too many arguments in their methods wich makes easy to understand. 
+
+Before this it's possible to say Leaflet is a well organized and efficient open source project.
 
 ##Evolution Process
 In this last assignment it was required to evolve a feature. Since there was a consensus in the group to further the development of the Leaflet project , an email was sent to the main team about features they would like to see implemented on Leaflet. One of the features they talked about was related to Polyline wrapping. Polylines are used to draw lines between given points on a map and they asked for an implementation of the option to wrap these coordinates. If this option is enabled and two points are separated in longitude by more than 180 degrees, these points will not cross the entire map by means of drawing the direct path which is longer, it will generate a shorter path around the side.
