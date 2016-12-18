@@ -7,7 +7,7 @@ As errors appear, new features are requested or performance needs to be improved
 
 Leaflet, as an open-source project, benefits from the support of the community to both identify these changes and implement them, which may help reduce this cost. On the other hand, having the input of so many different users and developers requires the core team to keep the code quality up and the software maintainable.
 
-##Better Code hub
+##Better Code Hub
 In order to evaluate Software Maintainability, i used the Better Code Hub service and this were the results:
 ![Results](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/BCH%20Results.png)
 This service analyses the repository on 10 different parameters, although for some projects some of the properties are not evaluated properly.  
@@ -47,7 +47,7 @@ Considering this results we believe that Leaflet would pass this section if it w
 
 ##Evolution Process
 In this last assignment it was required to evolve a feature. Since there was a consensus in the group to further the development of the Leaflet project , an email was sent to the main team about features they would like to see implemented on Leaflet. One of the features they talked about was related to Polyline wrapping. Polylines are used to draw lines between given points on a map and they asked for an implementation of the option to wrap these coordinates. If this option is enabled and two points are separated in longitude by more than 180 degrees, these points will not cross the entire map but will take the shortest path around the map.
-The starting point to implement this feature was to add the option noWrap on Polyline options. The next step was to modify the convertLatLngs method on Polyline by calling wrapCoordinates if the option noWrap was set. This method receives an array of coordinates and checks if two coordinates are separated on longitude by more than 180 degrees: if so, this method will calculate the angle between the starting point  (ALTERAR ISTO AQUI).
+The starting point to implement this feature was to add the option noWrap on Polyline options. The next step was to modify the convertLatLngs method on Polyline by calling wrapCoordinates if the option noWrap was set. This method receives an array of coordinates and checks if two coordinates are separated on longitude by more than 180 degrees: if so, this method will calculate the angle between the starting point and the next point but within the same longitude range as the previous ponit. After calculating this angle, this polyline will be split into two. The first point will connect to a new point near the longitude limit (-180 degrees or 180 degrees depending on the direction) and the destination point will be connected to a point on the opposite longitude.
 However, this was not enough since Polyline will draw a line between all the adjacent points. To fix this, an attribute was added to some points so it won't connect the last point to the point that was marked. After this, the projectLatLngs method was modified to separate these lines by adding different arrays called "rings" on the argument "result" instead of only one array.
 
 ##Group members
