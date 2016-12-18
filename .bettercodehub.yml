@@ -3,8 +3,10 @@ exclude:
 - /build/.*
 - /debug/.*
 - /docs/.*
-- /spec/.*
 component_depth: 2
 languages:
 - javascript
 - script
+tests:
+    include:
+        - /spec/suites/.*
