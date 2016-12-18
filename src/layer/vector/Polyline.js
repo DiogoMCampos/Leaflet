@@ -199,49 +199,41 @@ L.Polyline = L.Path.extend({
 
 
 	_wrapCoordinates: function (coordinates) {
-		var newCoords = [];
+		var newCoords = [], j = 0;
+
 		for (var i = 0; i < coordinates.length - 1; i++) {
-			if (Math.abs(coordinates[i].lng - coordinates[i + 1].lng) > 180) {
-				var angle;
-				if (coordinates[i + 1].lng > coordinates[i].lng) {
-					angle = Math.atan2(coordinates[i].lat - coordinates[i + 1].lat, coordinates[i].lng - (coordinates[i + 1].lng - 360));
-				} else {
-					angle = Math.atan2(coordinates[i].lat - coordinates[i + 1].lat, coordinates[i].lng - (coordinates[i + 1].lng + 360));
+			var coord = coordinates[i], next = coordinates[i+1];
+			if (Math.abs(coord.lng - next.lng) > 180) {
+				var width, dx, dx2, newLng, newLng2;
+
+				if ((next.lng > coord.lng && next.lat > coord.lat) || (next.lng > coord.lng && next.lat < coord.lat)) {
+                    width = -360 + (next.lng - coord.lng);
+            	} else{
+					width = 360 + (next.lng - coord.lng);
 				}
+				angle = Math.atan2(next.lat - coord.lat, width);
 
-				var newPoint = new L.LatLng(0, 0),
-				   newPoint2 = new L.LatLng(0, 0),
-				   dx, dx2, newLng, newLng2;
-
-				if (coordinates[i].lng < 0) {
-					dx = -180 - coordinates[i].lng;
+				if (coord.lng < next.lng ) {
+					dx = -180 - coord.lng;
 					newLng = -180;
-					dx2 = 180 - coordinates[i + 1].lng;
-					newLng2 = 180;
+					dx2 = 180 - next.lng;
 				} else {
-					dx = 180 - coordinates[i].lng;
+					dx = 180 - coord.lng;
 					newLng = 180;
-					dx2 = -180 - coordinates[i + 1].lng;
-					newLng2 = -180;
+					dx2 = -180 - next.lng;
 				}
 
-				newPoint.lat = coordinates[i].lat + Math.tan(angle) * dx;
-				newPoint.lng = newLng;
-				newCoords[i] = coordinates[i];
-				newCoords[i + 1] = newPoint;
-				newCoords[i + 3] = coordinates[i + 1];
-				newPoint2.lat = coordinates[i + 1].lat + Math.tan(angle) * dx2;
-				newPoint2.lng = newLng2;
-				newCoords[i + 2] = newPoint2;
+				newLng2 = -newLng;
+				newCoords[j++] = coord;
+				newCoords[j++] = new L.LatLng(coord.lat + Math.tan(angle) * dx, newLng);
+				newCoords[j] = new L.LatLng(next.lat + Math.tan(angle) * dx2, newLng2);
+				newCoords[j++].newRing = true;
 
-				newCoords[i + 2].newRing = true;
-				i++;
 			} else {
-				newCoords.push(coordinates[i]);
+				newCoords[j++] = coord;
 			}
 		}
 		newCoords.push(coordinates[coordinates.length - 1]);
-
 		return newCoords;
 	},
 
