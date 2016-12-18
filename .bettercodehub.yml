@@ -7,6 +7,6 @@ component_depth: 2
 languages:
 - javascript
 - script
-tests:
-    include:
-        - /spec/suites/.*
+test:
+include:
+- /spec/suites/.*
