@@ -4,7 +4,7 @@
 #Assignment 5: Software Maintenance/Evolution
 
 ##Software Evolution and Maintainability
-As errors appear, new features are requested or performance needs to be improved, software systems need to evolve. This proves costly to many organizations, as many man-hours can be needed to perform the necessary changes.
+As errors appear, new features are requested or performance requires improvement, software systems need to evolve. This proves costly to many organizations, as many man-hours can be needed to perform the necessary changes.
 
 Leaflet, as an open-source project, benefits from the support of the community to both identify these changes and implement them, which may help reduce this cost. On the other hand, having the input of so many different users and developers requires the core team to keep the code quality up and the software maintainable.
 
@@ -47,7 +47,7 @@ According to Better Code Hub, Leaflet has 7352 lines of code, so as a medium sys
 
 Considering these results we believe that Leaflet would pass this section if it was supported by Better Code Hub.
 
-NOTE: This analysis was made in the early phase of the assignment. During that time, Better Code Hub released a version that made it possible to verify projects made in JavaScript. However, this service was unavailable and therefore wasn't possible to make full use of this updated version.
+NOTE: This analysis was made in the early phase of the assignment. During that time, Better Code Hub released a new version and we decided to try to include the tests again. However, this service was unavailable and therefore wasn't possible to make full use of this updated version. We consider that the 
 
 ###Simple Units of Code
 ![Simple Units of Code](https://github.com/DiogoMCampos/Leaflet/blob/ESOF-Documentation/ESOF-docs/resources/2.%20SimpleUnits.png?raw=true)
@@ -63,9 +63,21 @@ With all of the tests Better Code Hub provides, it's possible to see Leaflet has
 To conclude, it's possible to say Leaflet is a well organized and efficient open source project.
 
 ##Evolution Process
-In this last assignment it was required to evolve a feature. Since there was a consensus in the group to further the development of the Leaflet project , an email was sent to the main team about features they would like to see implemented on Leaflet. One of the features they talked about was related to Polyline wrapping. Polylines are used to draw lines between given points on a map and they asked for an implementation of the option to wrap these coordinates. If this option is enabled and two points are separated in longitude by more than 180 degrees, these points will not cross the entire map by means of drawing the direct path which is longer, it will generate a shorter path around the side.
+
+###Adding a feature to Leaflet
+*"Leaflet doesn't try to do everything for everyone. Instead it focuses on making the basic things work perfectly."*
+
+In order to make maintaining the project easier, Leaflet focuses on a specific set of features and enforces this rather strictly. There are some clear paths to how new features are chosen, which have been discussed in the previous reports. 
+
+Since there was a consensus in the group to further the development of the Leaflet project, an email was sent to the main team about features they would like to see implemented on Leaflet. One of the features they talked about was related to Polyline wrapping around the International Date Line, as we were already familiar with the topic, due to having worked on it in the last assignment.
+
+Polylines are used to draw lines between given points on a map and there was an issue ([2645](https://github.com/Leaflet/Leaflet/issues/2645)) regarding the wrapping of the coordinates around the antimeridian. The goal was to implement an option to wrap these coordinates. If this option is enabled and two points are separated in longitude by more than 180 degrees, these points will not cross the entire map by means of drawing the direct path which is longer, it will generate a shorter path around the antimeridian. If the option is disabled, the current behavior will stand.
+
 The starting point to implement this feature was to add the option noWrap on Polyline options. The next step was to modify the convertLatLngs method on Polyline by calling wrapCoordinates if the option noWrap was set. This method receives an array of coordinates and checks if two coordinates are separated on longitude by more than 180 degrees: if so, this method will calculate the angle between the starting point and the next point but within the same longitude range as the previous ponit. After calculating this angle, this polyline will be split into two. The first point will connect to a new point near the longitude limit (-180 degrees or 180 degrees depending on the direction) and the destination point will be connected to a point on the opposite longitude.
+
 However, this was not enough since Polyline will draw a line between all the adjacent points. To fix this, an attribute was added to some points so it won't connect the last point to the point that was marked. After this, the projectLatLngs method was modified to separate these lines by adding different arrays called "rings" on the argument "result" instead of only one array.
+
+We submitted the Pull Request [5206](https://github.com/Leaflet/Leaflet/pull/5206) which contains an implementation of the specified feature.
 
 ##Group members
 *   [Bruno Barros](https://github.com/BrunoBarros21) - up201405249@fe.up.pt
