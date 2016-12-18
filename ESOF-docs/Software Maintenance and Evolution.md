@@ -1,15 +1,15 @@
 ![FEUP image](https://sigarra.up.pt/feup/pt/WEB_GESSI_DOCS.download_file?p_name=F-370784536/logo_cores_oficiais.jpg)
-![SIG logo](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/SIG.png)
 
+ [![BCH compliance](https://bettercodehub.com/edge/badge/DiogoMCampos/Leaflet)](https://bettercodehub.com)
 #Assignment 5: Software Maintenance/Evolution
 
 ##Software Evolution and Maintainability
-As errors appear, new features are requested or performance needs to be improved, software systems need to evolve. This proves costly to many organizations, as many man-hours can be needed to perform the needed changes.
+As errors appear, new features are requested or performance needs to be improved, software systems need to evolve. This proves costly to many organizations, as many man-hours can be needed to perform the necessary changes.
 
 Leaflet, as an open-source project, benefits from the support of the community to both identify these changes and implement them, which may help reduce this cost. On the other hand, having the input of so many different users and developers requires the core team to keep the code quality up and the software maintainable.
 
 ##Better Code Hub
-In order to evaluate Software Maintainability, i used the Better Code Hub service and this were the results:
+Software Improvement Group (SIG for short) provided a source code analysis tool named Better Code Hub (BCH for short) in order to evaluate Software Maintainability and these were the results of its service:
 ![Results](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/BCH%20Results.png)
 This service analyses the repository on 10 different parameters, although for some projects some of the properties are not evaluated properly.  
 
@@ -17,9 +17,9 @@ This service analyses the repository on 10 different parameters, although for so
 ![Automate Tests](https://raw.githubusercontent.com/DiogoMCampos/Leaflet/ESOF-Documentation/ESOF-docs/resources/9.AutomateTests.png)
 Better Code Hub only checks tests for Java and C# currently, which leads to Leaflet failing this section due to being a JavaScript project.
 
-Manually, we checked the number of lines and asserts (*expect*) in four random test files and compared them to the number of lines in their source code equivalent (including comments) following the criteria used by Better Code Hub.
+Manually, the group checked the number of lines and asserts (*expect*) in four random test files and compared them to the number of lines in their source code equivalent (including comments) following the criteria used by Better Code Hub.
 
-According to BetterCodeHub, Leaflet has 7352 lines of code, so as a medium system, the number of lines of test code should be **50%** of the number of lines of source code and the assert density should be at least **1%**.
+According to Better Code Hub, Leaflet has 7352 lines of code, so as a medium system, the number of lines of test code should be **50%** of the number of lines of source code and the assert density should be at least **1%**.
 
 ####TileLayer:
 *   */src/layer/tile/TileLayer.js*: 281 lines.
@@ -30,7 +30,7 @@ According to BetterCodeHub, Leaflet has 7352 lines of code, so as a medium syste
 ####Events:
 *   */src/core/Events.js*: 289 lines.
 *   */spec/suites/core/EventsSpec.js*: 607 lines and 96 expect.
-*   Pertentage of code lines: 241%
+*   Percentage of code lines: 241%
 *   Assert Density: 15.8%
 
 ####Bounds:
@@ -45,19 +45,22 @@ According to BetterCodeHub, Leaflet has 7352 lines of code, so as a medium syste
 *   Percentage of test code lines: 108.5%
 *   Assert Density: 22.9%
 
-Considering this results we believe that Leaflet would pass this section if it was supported by Better Code Hub.
+Considering these results we believe that Leaflet would pass this section if it was supported by Better Code Hub.
+
+NOTE: This analysis was made in the early phase of the assignment. During that time, Better Code Hub released a version that made it possible to verify projects made in JavaScript. However, this service was unavailable and therefore wasn't possible to make full use of this updated version.
 
 ###Simple Units of Code
 ![Simple Units of Code](https://github.com/DiogoMCampos/Leaflet/blob/ESOF-Documentation/ESOF-docs/resources/2.%20SimpleUnits.png?raw=true)
-In this chapter, Better Code Hub verifys the existence of branch points (if, for, while, etc.) and Leaflet fails because of the excessive using of this conditions.
+In this topic, Better Code Hub verifies the existence of branch points (if, for, while, etc.).
+Leaflet fails this because of an excessive use of these conditionals and loops.
 
-Leaflet uses specially the ``if`` condition due to possibility of activate or desactivate different features. Cycles ``for`` are excessively used too.
+Leaflet is a highly customizable project. Therefore, it is necessary to be abundant in the use of conditionals to handle the activation or deactivation of each feature.
+As for loops, Leaflet uses them mostly to display additional layers provided by the user.
 
-In Resume Leaflet passed with almost every test sucssefully evaluated, despite the two mentioned above. 
+As for the other test cases, Leaflet passed every test successfully.
+With all of the tests Better Code Hub provides, it's possible to see Leaflet has a clean, small and structured code with no repetitions of the same. Leaflet also doesn't have too many arguments in their methods which makes it easy to understand.
 
-With all of the tests Better Code Hub provided it's possible to see Leaflet has a clean, small and structured code with no repetitions of the same. Leaflet also don't have too many arguments in their methods wich makes easy to understand. 
-
-Before this it's possible to say Leaflet is a well organized and efficient open source project.
+To conclude, it's possible to say Leaflet is a well organized and efficient open source project.
 
 ##Evolution Process
 In this last assignment it was required to evolve a feature. Since there was a consensus in the group to further the development of the Leaflet project , an email was sent to the main team about features they would like to see implemented on Leaflet. One of the features they talked about was related to Polyline wrapping. Polylines are used to draw lines between given points on a map and they asked for an implementation of the option to wrap these coordinates. If this option is enabled and two points are separated in longitude by more than 180 degrees, these points will not cross the entire map by means of drawing the direct path which is longer, it will generate a shorter path around the side.
